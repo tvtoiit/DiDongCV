@@ -1,0 +1,76 @@
+<app-header></app-header>
+<div id="wrapper">
+    <div class="container-body">
+        <main>
+            <div class="grid-members">
+                <div class="grid-item">
+                    <div class="user-menu-side">
+                        <div class="user-name">
+                            <!-- <img onerror="this.src='#'" src="#" alt="avatar" class="img-responsive"> -->
+                            <div class="name">
+                                Xin chào, 
+                                <span>phucnguyenks25</span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li class="">
+                                <div (click)="ThongTinTaiKhoan()">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    Thông tin tài khoản        
+                                </div>
+                            </li>
+                            <li class="">
+                                <div (click)="QuanLyDonHang()">
+                                    <i class="fa-brands fa-wpforms"></i>                                    
+                                    Quản lý đơn hàng        
+                                </div>
+                            </li>
+                            <li class="">
+                                <div (click)="DoiMatKhau()">
+                                    <i class="fa fa-lock" aria-hidden="true"></i>
+                                    Đổi mật khẩu        
+                                </div>
+                            </li>
+                            <li class="selected" (click)="SoDiaChi()">
+                                <div>
+                                    <i class="fa-solid fa-address-card"></i>
+                                    Sổ địa chỉ        
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <i class="fa fa-power-off" aria-hidden="true"></i>
+                                    Đăng xuất        
+                                </div>
+                            </li>
+                        </ul>           
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="user-content-side">
+                        <h2 class="member-title">Sổ địa chỉ</h2>
+                        <!-- <p>Bạn chưa thực hiện bất kỳ đơn đặt hàng nào trước đó!</p> -->
+                        <div class="list-address-member">
+                            <div class="address-btn" (click)="ChangeAddress()" title="Thêm địa chỉ">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                 Thêm địa chỉ                         
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="alert_modal fade" id="alert_modal">
+            <div class="alert_body">
+                <div class="alert_message" id="alert_message">
+        
+                </div>
+                <a id="a_message" onclick="close_alert()">Đóng</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<app-footer></app-footer>

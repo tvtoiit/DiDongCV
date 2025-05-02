@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+/* Reset CSS cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Loại bỏ kiểu dáng mặc định cho các phần tử danh sách */
+ul, ol {
+    list-style: none;
+}
+
+/* Loại bỏ đường viền mặc định của các phần tử liên kết và nút */
+a, button {
+    text-decoration: none;
+    border: none;
+    background: none;
+}
+
+/* Đặt chiều rộng của hình ảnh để không vượt ra ngoài phần tử chứa */
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Đặt font mặc định cho toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.style-text {
+    font-size: 13px small;
+}
+button:hover{
+    cursor: pointer;
+}
+.padding__icon{
+    padding: 5px;
+    
+}
+
+.text-color{
+    color: black;
+}
+
+p{
+    margin: 0 0 10px;
+}

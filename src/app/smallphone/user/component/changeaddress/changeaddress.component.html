@@ -1,0 +1,140 @@
+<app-header></app-header>
+<div id="wrapper">
+    <div class="container-body">
+        <main>
+            <div class="grid-members">
+                <div class="grid-item">
+                    <div class="user-menu-side">
+                        <div class="user-name">
+                            <!-- <img onerror="this.src='#'" src="#" alt="avatar" class="img-responsive"> -->
+                            <div class="name">
+                                Xin chào, 
+                                <span>phucnguyenks25</span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li class="">
+                                <div (click)="ThongTinTaiKhoan()">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    Thông tin tài khoản        
+                                </div>
+                            </li>
+                            <li class="">
+                                <div (click)="QuanLyDonHang()">
+                                    <i class="fa-brands fa-wpforms"></i>                                    
+                                    Quản lý đơn hàng        
+                                </div>
+                            </li>
+                            <li class="">
+                                <div (click)="DoiMatKhau()">
+                                    <i class="fa fa-lock" aria-hidden="true"></i>
+                                    Đổi mật khẩu        
+                                </div>
+                            </li>
+                            <li class="selected" (click)="SoDiaChi()">
+                                <div>
+                                    <i class="fa-solid fa-address-card"></i>
+                                    Sổ địa chỉ        
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <i class="fa fa-power-off" aria-hidden="true"></i>
+                                    Đăng xuất        
+                                </div>
+                            </li>
+                        </ul>            
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="user-content-side">
+                        <h2 class="member-title">Thông tin tài khoản</h2>
+                        <div class="list-add-address-member">
+                            <form action="" method="post" name="frmAddress" id="frmAddress">
+                                <div class="box-user">
+                                    <label for="a_name" class="label-input">Họ và tên</label>
+                                    <input type="text" name="a_name" id="a_name" value="phucnguyenks25" placeholder="Họ và tên">
+                                </div>
+                                <div class="box-user">
+                                    <label for="a_tel" class="label-input">Số điện thoại</label>
+                                    <input type="text" name="a_tel" id="a_tel" value="" placeholder="Số điện thoại">
+                                </div>
+                                <div class="box-user">
+                                    <label for="a_city" class="label-input">Tỉnh/ Thành phố</label>
+                                    <select name="a_city" id="a_city" data-select2-id="select2-data-a_city" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+                                        <option value="" data-select2-id="select2-data-2-wcsh">Tỉnh/ Thành phố</option>
+                                    </select>
+                                    <span class="select2" dir="ltr" data-select2-id="select2-data-1-xrs3">
+                                        <span class="selection">
+                                            <span class="select2-selection" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-a_city-container">
+                                                <span class="select2-selection__rendered" id="select2-a_city-container" role="textbox" aria-readonly="true" title="Tỉnh/ Thành phố">Tỉnh/ Thành phố</span>
+                                                <span class="select2-selection__arrow" role="presentation">
+                                                    <i class="fa fa-angle-down"></i>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="dropdown-wrapper" aria-hidden="true">
+
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="box-user">
+                                    <label for="a_district" class="label-input">Quận/ Huyện</label>
+                                    <select name="a_district" id="a_district" data-select2-id="select2-data-a_district" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+                                        <option value="" data-select2-id="select2-data-4-or9i">Quận/ Huyện</option>
+                                        <option data-id="1" value="1">Q. Ba Đình</option>
+                                    </select>
+                                    <span class="select2 " dir="ltr" data-select2-id="select2-data-3-fhpg">
+                                        <span class="selection">
+                                            <span class="select2-selection" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="">
+                                                <span class="select2-selection__rendered" id="" role="textbox" aria-readonly="true" title="Quận/ Huyện">Quận/ Huyện</span>
+                                                <span class="select2-selection__arrow" role="presentation">
+                                                    <i class="fa fa-angle-down"></i>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                    </span>
+                                </div>
+                                <div class="box-user">
+                                    <label for="a_ward" class="label-input">Phường/ Xã</label>
+                                    <select name="a_ward" id="a_ward" data-select2-id="select2-data-a_ward" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true"></select>
+                                    <span class="select2 " dir="ltr" data-select2-id="select2-data-5-gm5z"><span class="selection">
+                                        <span class="select2-selection" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-a_ward-container">
+                                            <span class="select2-selection__rendered" id="select2-a_ward-container" role="textbox" aria-readonly="true"></span>
+                                            <span class="select2-selection__arrow" role="presentation">
+                                                <i class="fa fa-angle-down"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                                <div class="box-user">
+                                    <label for="a_add" class="label-input">Địa chỉ chi tiết</label>
+                                    <input type="text" name="a_add" id="a_add" value="" placeholder="Địa chỉ chi tiết">
+                                </div>
+                                <div class="box-user box-submit">
+                                    <a href="" class="submit-btn" id="save_add_btn">Lưu thay đổi</a>
+                                    <input type="hidden" name="module" value="members">
+                                    <input type="hidden" name="view" value="members">
+                                    <input type="hidden" name="task" value="save_address">
+                                    <input type="hidden" name="d_id" id="d_id" value="">
+                                    <input type="hidden" name="w_id" id="w_id" value="">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="alert_modal fade" id="alert_modal">
+            <div class="alert_body">
+                <div class="alert_message" id="alert_message">
+        
+                </div>
+                <a id="a_message" onclick="close_alert()">Đóng</a>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

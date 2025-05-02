@@ -1,0 +1,308 @@
+<app-header></app-header>
+<div class="container-body">
+    <div id="container">
+        <main>
+            <div class="container">
+                <div class="container-cart">
+                    <div class="nav-cart">
+                        <a href="#" class="buy-more">
+                            Mua thêm sản phẩm khác
+                        </a>
+                        <a href="#" class="user">
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#FF6700">
+                                </path>
+                            </svg>
+                            Trang cá nhân
+                        </a>
+                    </div>
+                    
+                    <div class="content-cart" >
+                        <!--  -->
+                        <div class="list-products">
+                            <div class="product-cart1" *ngFor="let item of cartArr; let i = index" >
+                                <div class="product-cart">
+                                    <div class="product-image text-center">
+                                        <div class="check-order__product">
+                                            <input type="checkbox" [(ngModel)]="item.checked" (change)="onItemCheckedChange()" />
+                                            <a href="" title="iPhone 12 Pro Max 256GB Cũ Nguyên Bản Đẹp Như Mới 2 Sim Vật Lý">
+                                                <img src="{{item.img}}" alt="" class="img-responsive" onerror="">
+                                            </a>
+                                        </div>
+                                        <a class="del-pro-link" data-id="11842" title="Xóa">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                                                <path transform="translate(0)"></path>
+                                                <path transform="translate(-134.668 -134.668)"></path>
+                                            </svg>
+                                            <button class="delete" (click)="deleteToCart(i)">Xóa</button>
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="product-detail">
+                                        <div class="top_detail">
+                                            <a class="product-name" href="" title="{{item.title}}">
+                                                {{item.title}}
+                                            </a>
+                                        </div>
+                                        <div class="accessories accessories_1" data-id="1">
+                                            <h4>Khuyến mãi:</h4>
+                                            
+                                            <ul>
+                                                <li class=""><img src="assets/icon_check (1).svg" alt="">
+                                                    Tặng&nbsp;bảo hành full 1 đổi 1 trong 30 ngày, bảo hành full 6 tháng
+                                                </li>
+                                                <li class=""><img src="assets/icon_check (1).svg" alt="">
+                                                    Tặng full Combo sạc cáp nhanh, cường lực, ốp lưng khi nâng cấp Dgold
+                                                </li>
+                                                <li class="" *ngIf="isVisible"><img src="assets/icon_check (1).svg" alt="">
+                                                    Tặng 01 lần thay pin trị&nbsp;giá tới 1 triệu,&nbsp;khi nâng cấp Dgold
+                                                </li>
+                                                <li class="" *ngIf="isVisible"><img src="assets/icon_check (1).svg" alt="">
+                                                    Hỗ trợ thu lại lên đời giá cao
+                                                </li>
+                                                <li class="" *ngIf="isVisible"><img src="assets/icon_check (1).svg" alt="">
+                                                    Hỗ trợ trả góp 0đ qua HomPay Later, Thẻ tín dụng, Kredivo duyệt hồ sơ nhanh 15 phút
+                                                </li>
+                                            </ul>
+                                            <span class="view_more view_more_1">
+                                                <span data-state="1" (click)="toggleVisibility()">và 3 khuyến mãi</span>
+                                            </span>
+                                        </div>
+                                        <div class="price_detail">
+                                            <div class="box_color">
+                                                <span class="select_color" data-id="1">Màu: Trắng</span>
+                                            </div>
+                                            
+                                        </div>
+
+                                    </div>
+
+                                    <div class="product-price">
+                                        <div class="fee">
+                                            <p class="price-item">{{item.price}}</p>
+                                            <del class="old-price">{{item.discount}}</del>
+                                        </div>
+
+                                        <div class="quan">
+                                            <span class="number-input">
+                                                <button type="button"class="down" (click)="down(i)">-</button>
+                                                <input type="number" value="{{item.quantity}}">
+                                                <button type="button"class="plus" (click)="plus(i)">+</button>
+                                            </span>                       
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                            <input type="hidden" id="list_product_gift_11842" value="">
+                        </div>
+
+                        <div class="total-price-products">
+                            <p class="">Tạm tính ({{quantity}}) sản phẩm:
+                                <span class="price_tam">{{total}}đ</span>
+                            </p>
+                            <p class="">Phí vận chuyển:
+                                <span>Liên hệ</span>
+                            </p>
+                            <p class="">Mã giảm giá:
+                                <span id="code_dis">0đ</span>
+                            </p>
+                        </div>
+
+                        <div class="payment">
+                            <!-- #form="ngForm" (ngSubmit)="onSubmit()" -->
+                            <form action=""  class="formPayment" id="formPayment">
+                                <h3 class="h3_title">Thông tin mua hàng</h3>
+                                <div class="radio-gender">
+                                    <label for="gender1">
+                                        <input type="radio" name="gender" id="gender1" value="1" checked="">
+                                        <span>Anh</span>
+                                    </label>
+
+                                    <label for="gender0">
+                                        <input type="radio" name="gender" id="gender0" value="0">
+                                        <span>Chị</span>
+                                    </label>
+                                </div>
+
+                                <div class="row-customer">
+                                    <div class="row_customer">
+                                        <input [(ngModel)]="userInput" class="form-control-customer" type="text" name="name" id="name" placeholder="Họ tên">
+                                    </div>
+                                    
+                                    <div class="row_customer">
+                                        <input class="form-control-customer" type="text" name="phone" [(ngModel)]="phone" required  pattern="^[0-9]{10,11}$" #phoneInput="ngModel" placeholder="Nhập số điện thoại">
+                                    </div>        
+                                </div>
+
+                                <h3 class="h3_title">Chọn cách thức mua hàng</h3>
+                                <div class="typeReceive">
+                                    <label for="receive0" title="Giao tận nơi">
+                                        <input type="radio" name="receive" id="receive0" value="1" checked="">
+                                        <span>Giao tận nơi</span>
+                                    </label>
+                                    <label for="receive1" title="">
+                                        <input type="radio" name="receive" value="2" id="receive1">
+                                        <span>Nhận tại cửa hàng</span>
+                                    </label>        
+                                 </div>
+
+                                <div class="tabReceive">
+                                    <div class="mainTab active" id="tab0">
+                                        <p class="tab-title">
+                                            Chọn địa chỉ để biết thời gian và phí vận chuyển (nếu có)
+                                        </p>
+                                        <div class="delivery">
+                                            <div class="Tinh_Quan">
+                                                <div class="text_delivery">
+                                                    <select [(ngModel)]="selectedProvinceCode" name="province" 
+                                                    (ngModelChange)="onProvinceChange($event)">
+                                                        <option selected [value]="null" disabled >Chọn Tỉnh/Thành</option>
+                                                        <option *ngFor="let item of provincesArr" [value]="item.code">
+                                                            {{item.name}}
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                                <!-- Huyen -->
+                                                <div class="text_delivery">
+                                                    <select  [(ngModel)]="selectedWardsCode" name="province"
+                                                    (ngModelChange)="onWardsChange($event)">
+                                                        <option selected [value]="null" disabled>Chọn Quận/Huyện</option>
+                                                        <option *ngFor="let itemDistrict of districts" [value]="itemDistrict.code">
+                                                            {{itemDistrict.name}}
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="clearfix"></div>
+                                            <!-- xa -->
+                                            <div class="Phuong">
+                                                <div class="text_delivery">
+                                                    <select  [(ngModel)]="selectedXaCode" name="xa">
+                                                        <option selected [value]="null" disabled>Chọn Xã</option>
+                                                        <option *ngFor="let itemWard of ward">{{itemWard.name}}</option>
+                                                    </select>
+                                                </div>
+    
+                                                <div class="text_delivery">
+                                                    <input class="addDress" placeholder="Số nhà, tên đường">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="request_orther">
+                                    <input class="" type="text" name="note" id="note" placeholder="Yêu cầu khác (không bắt buộc)">
+                                </div>
+                                <div>
+                                    <div class="box_same">
+                                        <div class="check-show-hide">
+                                            <input type="checkbox" name="same_address" id="same_address" value="1">
+                                            <label for="same_address">Gọi người khác nhận hàng (nếu có)</label>
+                                        </div>
+    
+                                        <div class="add_same_address" id="add_same_address">
+                                            <div class="">
+                                                <label for="re_gender1">
+                                                    <input type="radio" name="re_gender" id="re_gender1" [(ngModel)]="gender" value="1" checked="">
+                                                    <span>Anh</span>
+                                                </label>
+                                                <label for="re_gender0">
+                                                    <input type="radio" name="re_gender" id="re_gender0" [(ngModel)]="gender" value="0">
+                                                    <span>Chị</span>
+                                                </label>
+                                            </div>
+    
+                                            <div class="row">
+                                                <div class="row_ifany">
+                                                    <input class="form-control" type="text" name="re_name" id="re_name" placeholder="Họ tên">
+                                                </div>
+                                                <div class="row_ifany">
+                                                    <input class="form-control" type="text" name="re_telephone" id="re_telephone" placeholder="Số điện thoại">
+                                                </div>
+            
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <label for="card" class="card_check">
+                                        <input type="checkbox" name="card" id="card" value="1">
+                                        <span>Chuyển danh bạ, dữ liệu qua máy mới</span>
+                                    </label>
+    
+                                    <div class="company_check"> 
+                                        <label for="company" class="company">
+                                            <input type="checkbox" name="company" id="company" value="1">
+                                            <span>Xuất hóa đơn công ty</span>
+                                        </label>
+        
+                                        <div class="bill_company"  style="display: none;">
+                                            <div class="bill-invoice">
+                                                <input class="company-invoice" type="text" name="com_name" id="com_name" placeholder="Tên công ty">
+                                            </div>
+                                            <div class="bill-invoice">
+                                                <input class="company-invoice" type="text" name="com_add" id="com_add" placeholder="Địa chỉ">
+                                            </div>
+                                            <div class="bill-invoice">
+                                                <input class="company-invoice" type="text" name="com_tax" id="com_tax" placeholder="Mã số thuế">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="ma_giam">
+                                    
+                                    <div class="menubot collapsed" href="#" data-toggle="collapse">
+                                        <img src="assets/icon_giam.svg" alt="">
+                                        <span>Dùng mã giảm giá</span>
+                                    </div>
+                                    <div id="code_down_price" class="collapse code_down_price">
+                                        <div class="row">
+                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                                                <input type="text" name="code_down" id="code_down" placeholder="Nhập mã giảm giá">
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4 text-center">
+                                                <a href="javascript:void(0)" class="add_code_price" id="add_code_price">Áp dụng</a>
+                                                <input type="hidden" name="inputcode" id="inputcode" value="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <p class="total_end">
+                                    Tổng tiền:
+                                    <span id="total_money">{{total}}đ</span>
+                                </p>
+
+                                <div class="btn-area">
+                                    <!-- (click)="onHandleOrder()" type="submit" [disabled]="form.invalid" -->
+                                    <button id="cod-btn" class="payment-btn" title="Đặt hàng" (click)="onHandleOrder()"> Đặt hàng</button>
+                                </div>
+
+                                <input type="hidden" name="module" value="products">
+                                <input type="hidden" name="view" value="cart">
+                                <input type="hidden" name="task" value="buy_member">
+                                <input type="hidden" name="list_prd" id="list_prd" value="67599">
+                                <input type="hidden" name="name_discount" id="name_discount" value="">
+                                <input type="hidden" name="fee" id="fee" value="">
+                                <input type="hidden" name="before_discount" id="before_discount" value="13990000">  
+                                <input type="hidden" name="discount_title" id="discount_title" value="">
+                                <input type="hidden" name="total_price" id="total_price" value="13990000">
+                                <input type="hidden" name="state" id="state" value="">
+        
+                                <input type="hidden" name="total_quan" id="total_quan" value="1">
+        
+                                <input type="hidden" value="http://didongthongminh.vn/gio-hang.html" name="return" id="return">
+                                <input type="hidden" name="csrf" id="csrf" value="aHR0cHM6Ly9kaWRvbmd0aG9uZ21pbmgudm4vLTIzOjEwOjUx">
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <span class="agree">Bằng cách đặt hàng, bạn đồng ý với Điều khoản sử dụng của Didongthongminh</span>
+            </div>
+        </main>
+    </div>
+</div>
+<app-footer></app-footer>

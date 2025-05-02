@@ -1,0 +1,120 @@
+<app-header></app-header>
+<body>
+    <div class="wrapper">
+        <div class="container-body">
+            <nav class="admin">
+                <h3 class="text" (click)="backHome()">Trang chủ</h3>
+                <h3 class="text">Quản lý</h3>
+                <ul class="text">
+                    <li>
+                        <div class="" (click)="accountCustomer()">
+                            <i class="fa-solid fa-user"></i>
+                            Khách hàng
+                        </div>
+                    </li>
+                    <li class="" (click)="order()">
+                        <div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            Đơn hàng
+                        </div>
+                    </li>
+                    <li class="selected" (click)="addproduct()">
+                        <div>
+                            <i class="fa-solid fa-list"></i>
+                            Sản phẩm
+                        </div>
+                    </li>
+                    <!-- <li class="">
+                        <div>
+                            <i class="fa-solid fa-list"></i>
+                            Loại sản phẩm
+                        </div>
+                    </li> -->
+                    <li class="" (click)="complain()">
+                        <div>
+                            <i class="fa-solid fa-star"></i>
+                            Đánh giá sản phẩm
+                        </div>
+                    </li>
+                </ul>
+                <h3 class="text">Thống kê</h3>
+                <ul class="text">
+                    <li>
+                        <div>
+                            <i class="fa-solid fa-chart-simple"></i>
+                        Danh mục bán chạy
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-chart-simple"></i>
+                        Sản phẩm bán chạy
+                    </li>
+                    <li>
+                        <div>
+                            <i class="fa-solid fa-chart-simple"></i>
+                        Hàng tồn kho
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <div class="content-body">
+                <div class="title">Danh sách sản phẩm</div>
+                <div class="container-btn">
+                    <input type="text" placeholder="Tìm kiếm..." class="search">
+                    <div class="button">
+                        <button class="btn">Thêm sản phẩm</button>
+                        <button class="btn">Xuất Excel</button>
+                    </div>
+                </div>
+                <div class="content-main">
+                    <table class="product-table">
+                        <!-- <tr class="product-title">
+                          
+                        </tr>
+                        <tr class="product-content">
+                            
+                        </tr> -->
+                        <thead>
+                            <tr>
+                                <th>Hình ảnh</th>
+                                <th>Mã sản phẩm</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Giá</th>
+                                <th>Giảm giá</th>
+                                <th>Loại hàng</th>
+                                <th>Ngày thêm</th>
+                                <th>Thêm</th>
+                                <th>Xóa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="" alt=""></td>
+                                <td>P1</td>
+                                <td>iPhone 12</td>
+                                <td>12000000</td>
+                                <td>10%</td>
+                                <td>iPhone</td>
+                                <td>12-12-2024</td>
+                                <td>
+                                    <button>
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button>
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<app-footer></app-footer>

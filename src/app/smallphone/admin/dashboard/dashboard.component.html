@@ -1,0 +1,101 @@
+<app-header></app-header>
+<body>
+    <div class="wrapper">
+        <div class="container-body">
+            <nav class="admin">
+                <h3 class="text" (click)="backHome()">Trang chủ</h3>
+                <h3 class="text">Quản lý</h3>
+                <ul class="text">
+                    <li class="" (click)="accountCustomer()">
+                        <div>
+                            <i class="fa-solid fa-user"></i>
+                            Khách hàng
+                        </div>
+                    </li>
+                    <li class="" (click)="oder()">
+                        <div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            Đơn hàng
+                        </div>
+                    </li>
+                    <li class=""(click)="addproduct()">
+                        <div >
+                            <i class="fa-solid fa-list"></i>
+                            Sản phẩm
+                        </div>
+                    </li>
+                    <!-- <li class="">
+                        <div>
+                            <i class="fa-solid fa-list"></i>
+                            Loại sản phẩm
+                        </div>
+                    </li> -->
+                    <li class="" (click)="complain()">
+                        <div>
+                            <i class="fa-solid fa-star"></i>
+                            Đánh giá sản phẩm
+                        </div>
+                    </li>
+                </ul>
+                <h3 class="text">Thống kê</h3>
+                <ul class="text">
+                    <li>
+                        <div>
+                            <i class="fa-solid fa-chart-simple"></i>
+                        Danh mục bán chạy
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-chart-simple"></i>
+                        Sản phẩm bán chạy
+                    </li>
+                    <li>
+                        <div>
+                            <i class="fa-solid fa-chart-simple"></i>
+                        Hàng tồn kho
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <div class="content-body">
+                <div class="container-content">
+                    <div class="button" (click)="oder()">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <div class="text-button">
+                            <p>120</p>
+                            <span>Đơn hàng</span>
+                        </div>
+                    </div>
+                    <div class="button" (click)="complain()">
+                        <i class="fa-solid fa-comment"></i>
+                        <div class="text-button">
+                            <p>120</p>
+                            <span>Bình luận</span>
+                        </div>
+                    </div>
+                    <div class="button" (click)="accountCustomer()">
+                        <i class="fa-solid fa-user"></i>
+                        <div class="text-button">
+                            <p>120</p>
+                            <span>Thành viên</span>
+                        </div>
+                    </div>
+                    <div class="button" >
+                        <i class="fa-solid fa-eye"></i>
+                        <div class="text-button">
+                            <p>120</p>
+                            <span>Người xem</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<app-footer></app-footer>

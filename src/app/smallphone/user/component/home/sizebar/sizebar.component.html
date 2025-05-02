@@ -1,0 +1,164 @@
+<div id="wrapper">
+    <div id="container">
+        <div class="sibar_menu">
+            <div>
+                <ul>
+                    <li>
+                        <a>
+                            <span>
+                                <img class="background-icon" src="assets/icon-dien-thoai.svg" fill="#4CAF50" alt="">
+                                Điện thoại
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a>
+                            <span>
+                                <img src="assets/icon-tablet.svg" alt="">
+                                Máy tính bảng
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a>
+                            <span>
+                                <img src="assets/icon-laptop.svg" alt="">
+                                Laptop
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a>
+                            <span>
+                                <img src="assets/icon-amthanh.svg" alt="">
+                                Âm thanh
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a>
+                            <span>
+                                <img src="assets/icon-phu-kien.svg" alt="">
+                                Phụ kiện
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a>
+                            <span>
+                                <img src="assets/icon-hang-cu.svg" alt="">
+                                Hàng cũ
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a>
+                            <span>
+                                <img src="assets/ipad-cu-gia-re-1.webp" alt="">
+                                iPad cũ
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a>
+                            <span>
+                                <img src="assets/icon-smartwatch.svg" alt="">
+                                SmartWatch
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a>
+                            <span>
+                                <img src="assets/icon-thu-cu4.svg" alt="">
+                                Thu cũ
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a>
+                            <span>
+                                <img src="assets/icon-tin-tuc.svg" alt="">
+                                Tin công nghệ
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sibar_banner">
+            <div>
+                <div class="tab-content">
+                    <div
+                      class="tab-pane"
+                      *ngFor="let tab of tabs; let i = index"
+                      [class.active]="i === activeIndex"
+                    >
+                      <img src="{{ tab.img }}" alt="">
+                    </div>
+                  </div>
+                  
+                  <div #tabContainer class="tabs">
+                    <div
+                      class="tab-item"
+                      *ngFor="let tab of tabs; let i = index"
+                      [class.active]="i === activeIndex"
+                      (click)="selectTab(i)"
+                    >
+                      <i class="tab-icon"></i>
+                      {{ tab.title }}
+                    </div>
+                    <div #line class="line"></div>
+                  </div>
+            </div>
+            
+        </div>
+        <div class="sibar_video">
+            <div class="item_video">
+                <a href="#">
+                    <picture>
+                        <img src="assets/20_1719391712.webp" alt="">
+                    </picture>
+                </a>
+            </div>
+            <div class="item_video">
+                <a href="#">
+                    <picture>
+                        <img src="assets/20_1719391712.webp" alt="">
+                    </picture>
+                </a>
+            </div>
+            <div class="item_video">
+                <a href="#">
+                    <picture>
+                        <img src="assets/20_1719391712.webp" alt="">
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="news">
+    <div class="news_element">
+        <img src="assets/hot_new.svg" alt="">
+        <h3>TIN HOT: </h3>
+        <h4>
+            <a href="">Tuần lễ vàng, xả Apple sập sàn</a>
+        </h4>
+    </div>
+</div>
+<div class="banner-content">
+    <div class="banner-content__img">
+        <img src="assets/orange-and-blue-playful-summer-activity-presentation-3_1710742731.webp" alt="">
+        <img src="assets/orange-and-blue-playful-summer-activity-presentation-1_1710742425.webp" alt="">
+    </div>
+</div>

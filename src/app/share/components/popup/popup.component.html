@@ -1,0 +1,11 @@
+<div class="popup-overlay" *ngIf="show" (click)="closePopup()">
+    <div class="popup-content" (click)="$event.stopPropagation()">
+      <div class="popup-header">
+        <h3></h3>
+        <button class="close-btn" (click)="closePopup()">✖</button>
+      </div>
+      <div class="popup-body">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>

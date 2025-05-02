@@ -1,0 +1,1495 @@
+<app-header></app-header>
+<app-popup  [show]="showPopup" (close)="closePopup()" *ngFor="let items of product">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="media-box">
+                <div class="top_modal">
+                    <p class="name_prd_popub">{{items.title}}</p>
+                    <p class="price_prd_popub">
+                        <span class="price_modal">{{items.discount}}đ</span>
+                        <span class="priceold_modal">{{items.price}}đ</span>
+                    </p>
+                </div>
+                <p class="title_select">Chọn màu:</p>
+                <div class="products_type--popup" *ngFor="let items of product">
+                    <div class="item_price_popup active " *ngFor="let item of items.imgDesc">
+                        <div class="img_prd">
+                            <img src="{{item.image}}" alt="Ảnh mô tả" class="img-responsive__popup">
+                        </div>
+                        <div class="radiobox">
+                        </div>
+                        <p>Đen</p>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="bound-input">
+                    <a class="btn btn-default" (click)="addToCart()" id="submitcart">
+                        <span>Thêm vào giỏ hàng</span>
+                    </a>
+                    <a href="#" class="view_cart">Xem giỏ hàng</a>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+</app-popup>
+
+<div class="body">
+    
+    <div class="body_container">
+        <div *ngFor="let item of product">
+        <div id="product">
+            <div class="product_title">
+                <h1>{{item.title}}</h1>
+                <span></span>
+                <div class="star-detail">
+                    <img src="assets/star-fill.png" alt="">
+                    <img src="assets/star-fill.png" alt="">
+                    <img src="assets/star-fill.png" alt="">
+                    <img src="assets/star-fill.png" alt="">
+                    <img src="assets/star-half.png" alt="">
+                </div>
+                <div class="total_rate">
+                    <span>30 đánh giá</span>
+                </div>
+                <div class="installment">
+                    Trả góp 0%
+                </div>
+            </div>
+        </div>
+        </div>
+        <!--  -->
+        <div *ngFor="let item of product">
+            <div id="product_detail">
+                <div class="product_detail-img">
+                    <div class="slide-image">
+                        <div class="img">
+                            <img src="{{item.thumbnail}}" alt="">
+                        </div>
+                        <div class="list-img">
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bot_summary">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="standard_product">
+                        <ul>
+                            
+                            <li>
+                                <img src="assets/tinh_trang.svg" style="width: 22px; height: 22px;" alt="">
+                                Máy nguyên bản, đẹp như mới 99%, đầy đủ VAT. Máy được kiểm tra chọn lọc kỹ qua 21 bước test
+                            </li>
+                            <li>
+                                <img src="assets/bo_sp.svg" style="width: 22px; height: 22px;"  alt="">
+                                Dung lượng Pin zin trên 84% trở lên đảm bảo hiệu năng sử dụng tốt
+
+                            </li>
+                            <li>
+                                <img src="assets/bh.svg" style="width: 22px; height: 22px;"  alt="">
+                                Hỗ trợ thay ngay Pin mới chỉ từ 300,000Đ&nbsp;tùy từng mẫu iPhone
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="call_shop">
+                        <span>Gọi đặt mua:</span>
+                        <img src="assets/call.svg" alt="">
+                        <a href="#">0966 119 995</a>
+                        <span>(Miễn phí 7:30 - 21:30)</span>
+                    </div>
+                    
+                    <div class="share_box">
+                        <div class="item">
+                            <span class="boder"><i class="fa-solid fa-link"></i></span>
+                            <span>Sao chép đường dẫn</span>
+                        </div>
+                        <div class="item">
+                            <span class="boder"><i class="fa-solid fa-clipboard"></i></span>
+                            <span>Sao chép thông tin</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="productt_detail-type">
+                    <div class="detail-top">
+                        <!-- <p class="">Bạn đang xem iPhone 12 Pro Max 256GB Cũ Nguyên Bản Đẹp Như Mới 2 Sim Vật Lý màu
+                            <span class="color_mobile">Đẹp 98%</span>
+                        </p> -->
+            
+                        <div class="box_top_mb">
+                            <div class="list_ct">
+                                <label for="city">Giá tại  </label>
+                                
+                                <select name="city" id="city" onchange="loadcity(this.value);">
+                                    <option selected="" value="1">Hà Nội</option>
+                                    <option value="11">Hải Dương</option>
+                                    <option value="3">Hải Phòng</option>
+                                    <option value="2">TP HCM</option>
+                                    <option value="47">Cần Thơ</option>
+                                </select>
+                            </div>
+                            <p class="top_prd">
+                                <span class="_price">{{item.price}}đ</span>
+                                <span class="price_old">16.990.000đ</span>
+                            </p>
+            
+                            <div class="edit-price">
+                                <div class="list_same">
+                                    <div class="item_same active">
+                                        <span class="nick_name">256GB</span>
+                                        <span class="price_same">12.690.000đ</span>
+                                    </div>
+                                    <div class="item_same">
+                                        <span class="nick_name">128GB</span>
+                                        <span class="price_same">12.790.000đ</span>
+                                    </div>
+                                </div>
+            
+                                <input type="hidden" id="products_sub" value="">
+                                    <div class="products_type">
+                                            <div name-item="Đẹp 98%" products_type_id="11843" data-price-sub="13590000" class="item_price active">
+                                                <span>
+                                                    <img src="assets/12prm-2-sim_1703651851.webp" alt="Đẹp 98%" class="img-responsive">
+                                                </span>
+                                                <p>
+                                                    <span>Đẹp 98%</span>
+                                                    <span class="price_item_sub price_item_11843" data-item-price="13590000" data-id="11843">13.590.000đ</span>
+                                                </p>
+                                            </div>
+                                            <div  name-item="Xanh Navy" products_type_id="11844" data-price-sub="13990000" class="item_price ">
+                                                <span>
+                                                        <img src="assets/12promax_blue_1680655914_copy_copy.webp" alt="Xanh Navy" class="img-responsive">
+                                                </span>
+                                                <p>
+                                                    <span>Xanh Navy</span>
+                                                    <span class="price_item_sub price_item_11844" data-item-price="13990000" data-id="11844">13.990.000đ</span>
+                                                </p>
+                                            </div>
+                                            <div  name-item="Vàng" products_type_id="11845" data-price-sub="13990000" class="item_price ">
+                                                <span>
+                                                    <img src="assets/12promax_gold_1680655914_copy_copy.webp" alt="Vàng" class="img-responsive">
+                                                </span>
+                                                <p>
+                                                    <span>Vàng</span>
+                                                    <span class="price_item_sub price_item_11845" data-item-price="13990000" data-id="11845">13.990.000đ</span>
+                                                </p>
+                                            </div>
+                                            <div  name-item="Xám" products_type_id="11841" data-price-sub="13790000" class="item_price ">
+                                                <span>
+                                                    <img src="assets/12promax_gray_1680655914_copy_copy.webp" alt="Xám" class="img-responsive">
+                                                </span>
+                                                <p>
+                                                    <span>Xám</span>
+                                                    <span class="price_item_sub price_item_11841" data-item-price="13790000" data-id="11841">13.790.000đ</span>
+                                                </p>
+                                            </div>
+                                            <div  name-item="Trắng" products_type_id="11842" data-price-sub="13990000" class="item_price ">
+                                                <span>
+                                                    
+                                                    <img src="assets/12promax_white_1680655913_copy_copy.webp" alt="Trắng" class="img-responsive">
+                                                </span>
+                                                <p>
+                                                    <span>Trắng</span>
+                                                    <span class="price_item_sub price_item_11842" data-item-price="13990000" data-id="11842">13.990.000đ</span>
+                                                </p>
+                                            </div>
+                                            <div  name-item="Đẹp 97%" products_type_id="12654" data-price-sub="12690000" class="item_price ">
+                                                <p>
+                                                    <span>Đẹp 97%</span>
+                                                    <span class="price_item_sub price_item_12654" data-item-price="12690000" data-id="12654">12.690.000đ</span>
+                                                </p>
+                                            </div>
+                                    </div>
+            
+                                    <div class="select_aspect">
+                                        <label for="aspect">Lựa chọn dung lượng pin:</label>
+                                        <select name="aspect" id="aspect" class="form-control">
+                                            <option value="146" data-calculate="1" data-priceaspect="0" selected="">Pin 84-89% nguyên bản</option>
+                                            <option value="147" data-calculate="1" data-priceaspect="300000">Pin 90-97% nguyên bản</option>
+                                            <option value="148" data-calculate="1" data-priceaspect="600000">Pin 99,100% nguyên bản </option>
+                                            <option value="149" data-calculate="1" data-priceaspect="400000">Pin 100% thay mới ( Cell Apple 1:1)</option>
+                                        </select>
+                                    </div>
+                            </div>
+            
+                            <div class="accessories" id="accessories">
+                                <div class="title_km">Khuyến mại</div>
+                                <ul>
+                                    <li>
+                                        <img src="assets/icon_check.svg" alt="" style="width: 16px; height: 16px;">
+                                        Tặng&nbsp;bảo hành full 1 đổi 1 trong 30 ngày , bảo hành full 6 tháng
+                                    </li>
+                                    <li>
+                                        <img src="assets/icon_check.svg" alt="" style="width: 16px; height: 16px;">
+                                        Tặng full Combo sạc cáp nhanh, cường lực, ốp lưng khi nâng cấp Dgold
+                                        
+                                    </li>
+                                    <li>
+                                        <img src="assets/icon_check.svg" alt="" style="width: 16px; height: 16px;">
+                                        Tặng 01 lần thay pin trị&nbsp;giá tới 1 triệu,&nbsp;khi nâng cấp Dgold
+
+                                    </li>
+                                    <li>
+                                        <img src="assets/icon_check.svg" alt="" style="width: 16px; height: 16px;">
+                                        Hỗ trợ thu lại lên đời giá cao</li>
+                                    <li>
+                                        <img src="assets/icon_check.svg" alt="" style="width: 16px; height: 16px;">
+                                        Hỗ trợ trả góp 0đ qua HomPay Later, Thẻ tín dụng, Kredivo duyệt hồ sơ nhanh 15 phút
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="claerfix"></div>
+            
+                        </div>
+                    </div>
+            
+                    <div id="button-cart" class="">
+                        <div class="buy-now">
+                            <button id="buy-now" href="#" class="btn-buy" data-toggle="modal" (click)="openPopup()">
+                                Mua ngay
+                                <span>Giao tận nơi hoặc nhận tại cửa hàng</span>
+                            </button>
+                        </div>
+                        <div class="">
+                            <input type="hidden" id="instalment" value="13025">
+                            <div class="col5">
+                                <div class="btn-buy-installment">
+                                    <a id="buy-pig1" href="#" class="btn-installment" onclick="" data-toggle="modal">
+                                        Mua trả góp 0%
+                                        <span>Duyệt hồ sơ trong 5 phút</span>
+                                    </a>
+                                </div>
+                                <div class="btn-buy-installment">
+                                    <a id="buy-pig1" href="#" class="btn-installment" onclick="" data-toggle="modal">
+                                        Trả góp qua thẻ
+                                        <span>Visa, Mastercard, JCB, Amex</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-detail-buycall">
+                    <div class="store-list">
+                        <!-- <div class="top_city">
+                            <p class="store_stocking hidden-xs">Cửa hàng có sẵn sản phẩm:</p>
+                            <p class="store_stocking visible-xs">iPhone 12 Pro Max 256GB Cũ Nguyên Bản Đẹp Như Mới 2 Sim Vật Lý</p>
+                        <div class="visible-xs">
+                            <div class="dropdown list_sub">
+                                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                                    Xanh Navy: 13.990.000đ 
+                                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                </button>
+                                <div class="dropdown-menu list_sub_drop">
+                                    <div class="item_price  products_type_click">
+                                        <p class="price_item_11843">Đẹp 98%: 13.590.000đ</p>
+                                    </div>
+                                    <div class="item_price  products_type_click   active">
+                                        <p class="price_item_11844">Xanh Navy: 13.990.000đ</p>
+                                    </div>
+                                    <div class="item_price  products_type_click">
+                                        <p class="price_item_11845">Vàng: 13.990.000đ</p>
+                                    </div>
+                                    <div class="item_price  products_type_click">
+                                        <p class="price_item_11841">Xám: 13.790.000đ</p>
+                                    </div>
+                                    <div class="item_price  products_type_click">
+                                        <p class="price_item_11842">Trắng: 13.990.000đ</p>
+                                    </div>
+                                    <div class="item_price  products_type_click">
+                                        <p class="price_item_12654">Đẹp 97%: 12.690.000đ</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div> -->
+                    <div class="visible-xs sanhang">
+                        <b class="count_store">Cửa hàng có sẵn sản phẩm:</b>
+                    </div>
+                        <div class="box_store">
+                            <div class="store" id="style-44">
+                                <!-- 119 Thái Thịnh, Đống Đa. -->
+                                <div class="store_name " >
+                                    <span class="name_store">
+                                        <i class="fa-solid fa-store"></i>119 Thái Thịnh, Đống Đa.
+                                        
+                                    </span>
+            
+                                    <div class="info_store">
+                                        <a class="phone_store" href="tel:0966119995">
+                                            <i class="fa-solid fa-mobile-screen-button"></i>0966119995
+                                        </a>
+                                        <a href="https://didongthongminh.vn/he-thong-cua-hang" class="map">
+                                            <i class="fa-solid fa-location-dot"></i>Xem bản đồ
+                                        </a>
+                                    </div>
+            
+                                    <div class="info_store">
+                                        <span class="is_stock">
+                                            <i class="fa-solid fa-circle-check"></i>Còn hàng
+                                        </span>
+                                        <p class="ghim">
+                                            <a href="javascript: void(0)" onclick="order(67599,24)">
+                                                <img src="assets/icon_save.svg" style="width: 17px;height: 16px;" alt="">Đặt giữ hàng</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 15 Trần Đại Nghĩa, Hai Bà Trưng. -->
+                                <div class="store_name unser_boder">
+                                    <span class="name_store">
+                                        <i class="fa-solid fa-store"></i>15 Trần Đại Nghĩa, Hai Bà Trưng.
+                                        
+                                    </span>
+                                    <div class="info_store">
+                                        <a class="phone_store" href="tel:0966119995">
+                                            <i class="fa-solid fa-mobile-screen-button"></i>0856781515
+                                        </a>
+                                        <a href="https://didongthongminh.vn/he-thong-cua-hang" class="map">
+                                            <i class="fa-solid fa-location-dot"></i>Xem bản đồ
+                                        </a>
+                                    </div>
+                                    <div class="info_store">
+                                        <span class="is_stock">
+                                            <i class="fa-solid fa-circle-check"></i>Còn hàng
+                                        </span>
+                                        <p class="ghim">
+                                            <a href="javascript: void(0)" onclick="order(67599,24)">
+                                                <img src="assets/icon_save.svg" style="width: 17px;height: 16px;" alt="">Đặt giữ hàng</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Khu vực khác -->
+                                <span class="area_diff">Khu vực khác</span>
+                                <!-- 35B Chợ Con, gần Hồ Bạch Đằng. -->
+                                <div class="store_name ">                    
+                                    <span class="name_store">
+                                        <i class="fa-solid fa-store"></i>35B chợ Con, gần Hồ Bạch Đằng, TP. Hải Dương
+                                        
+                                    </span>
+                                    <div class="info_store">
+                                        <a class="phone_store" href="tel:0966119995">
+                                            <i class="fa-solid fa-mobile-screen-button"></i>0899965566
+                                        </a>
+                                        <a href="https://didongthongminh.vn/he-thong-cua-hang" class="map">
+                                            <i class="fa-solid fa-location-dot"></i>Xem bản đồ
+                                        </a>
+                                    </div>
+                                    <div class="info_store">
+                                        <span class="is_stock">
+                                            <i class="fa-solid fa-circle-check"></i>Còn hàng
+                                        </span>
+                                        <p class="ghim">
+                                            <a href="javascript: void(0)" onclick="order(67599,24)">
+                                                <img src="assets/icon_save.svg" style="width: 17px;height: 16px;" alt="">Đặt giữ hàng</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 12 Điện Biên Phủ.   -->
+                                <div class="store_name ">
+                                    <span class="name_store">
+                                        <i class="fa-solid fa-store"></i>12 Điện Biên Phủ, TP Hải Phòng.
+                                        
+                                    </span>
+                                    <div class="info_store">
+                                        <a class="phone_store" href="tel:0916551212">
+                                            <i class="fa-solid fa-mobile-screen-button"></i>0916551212
+                                        </a>
+                                        <a href="https://didongthongminh.vn/he-thong-cua-hang" class="map">
+                                            <i class="fa-solid fa-location-dot"></i>Xem bản đồ
+                                        </a>
+                                    </div>
+                                    <div class="info_store">
+                                        <span class="is_stock">
+                                            <i class="fa-solid fa-circle-check"></i>Còn hàng
+                                        </span>
+                                        <p class="ghim">
+                                            <a href="javascript: void(0)" onclick="order(67599,24)">
+                                                <img src="assets/icon_save.svg" style="width: 17px;height: 16px;" alt="">Đặt giữ hàng</a>
+                                        </p>
+                                    </div>  
+                                </div>
+                                <!-- 699 Lê Hồng Phong , Quận 10.  -->
+                                <div class="store_name ">
+                                    <span class="name_store">
+                                        <i class="fa-solid fa-store"></i>699 Lê Hồng Phong , Quận 10.
+                                        
+                                    </span>
+                                    <div class="info_store">
+                                        <a class="phone_store" href="tel:0971699701">
+                                            <i class="fa-solid fa-mobile-screen-button"></i>0971699701
+                                        </a>
+                                        <a href="https://didongthongminh.vn/he-thong-cua-hang" class="map">
+                                            <i class="fa-solid fa-location-dot"></i>Xem bản đồ
+                                        </a>
+                                    </div>
+                                    <div class="info_store">
+                                        <span class="is_stock">
+                                            <i class="fa-solid fa-circle-check"></i>Còn hàng
+                                        </span>
+                                        <p class="ghim">
+                                            <a href="javascript: void(0)" onclick="order(67599,24)">
+                                                <img src="assets/icon_save.svg" style="width: 17px;height: 16px;" alt="">Đặt giữ hàng</a>
+                                        </p>
+                                    </div>  
+                                </div>
+                                <!-- 184A đường 3/2, Hưng Lợi, Ninh Kiều.  -->
+                                <div class="store_name ">
+                                    <span class="name_store">
+                                        <i class="fa-solid fa-store"></i>184A đường 3/2, Hưng Lợi, Ninh Kiều.
+                                        
+                                    </span>
+                                    <div class="info_store">
+                                        <a class="phone_store" href="tel:0911108855">
+                                            <i class="fa-solid fa-mobile-screen-button"></i>0911108855
+                                        </a>
+                                        <a href="https://didongthongminh.vn/he-thong-cua-hang" class="map">
+                                            <i class="fa-solid fa-location-dot"></i>Xem bản đồ
+                                        </a>
+                                    </div>
+                                    <div class="info_store">
+                                        <span class="is_stock">
+                                            <i class="fa-solid fa-circle-check"></i>Còn hàng
+                                        </span>
+                                        <p class="ghim">
+                                            <a href="javascript: void(0)" onclick="order(67599,24)">
+                                                <img src="assets/icon_save.svg" style="width: 17px;height: 16px;" alt="">Đặt giữ hàng</a>
+                                        </p>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bảo hành -->
+                    <div class="accessories_2">
+                        <h4>Bảo hành cơ bản</h4>
+                            <ul>
+                                <li>
+                                    <img src="assets/icon_check.svg" alt="" style="width: 16px; height: 16px;">
+                                    1 đỏi 1 trong 30 ngày sử dụng
+                                </li>
+                                <li>
+                                    <img src="assets/icon_check.svg" alt="" style="width: 16px; height: 16px;">
+                                    Bảo hành đầy đủ 6 tháng cả nguòn màn hình&nbsp;
+                                </li>
+                                <li>
+                                    <img src="assets/icon_check.svg" alt="" style="width: 16px; height: 16px;">
+                                    Bảo hành nhanh chóng uy tín, chất lượng
+
+                                </li>
+                            </ul>
+                    </div>
+            
+                    <div id="related" class="related_md"> 
+                        <div id="related" class=" related_mb">
+                            <!--<h4 class="relate_title">Sản phẩm liên quan</h4>-->
+                            <div class="msctrol">
+                                <div class="relate_products">
+                                    <div class="_content item clearfix">
+                                        <a href="#" title="iPhone 12 Pro 128GB Cũ Nguyên Bản Đẹp Như Mới">
+                                            <img class="" data-src="" onerror="" alt="iPhone 12 Pro 128GB Cũ Nguyên Bản Đẹp Như Mới" src="assets/12promax_white_1680655913_copy_copy.webp">
+                                            <div>
+                                                <h3>iPhone 12 Pro 128GB Cũ Nguyên Bản Đẹp Như Mới</h3>
+                                                <p>Giá: <strong style="color: #f60;">8.990.000đ</strong></p>
+                                            </div>
+                                        </a>
+                                    </div>
+            
+                                    <div class="_content item clearfix">
+                                        <a href="#" title="iPhone 12 Pro 128GB Cũ Nguyên Bản Đẹp Như Mới">
+                                            <img class="" data-src="" onerror="" alt="iPhone 12 Pro 128GB Cũ Nguyên Bản Đẹp Như Mới" src="assets/12promax_white_1680655913_copy_copy.webp">
+                                            <div>
+                                                <h3>iPhone 12 Pro 128GB Cũ Nguyên Bản Đẹp Như Mới</h3>
+                                                <p>Giá: <strong style="color: #f60;">8.990.000đ</strong></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- AN TÂM HƠN KHI CHỌN GÓI BẢO HÀNH -->
+         <div id="box_bh">
+            <div class="box_bh">
+                <div class="title_box">
+                    <img src="assets/icon_wan.svg" alt="icon" class="img-responsive icon_cat">
+                    <span>An tâm hơn khi chọn gói bảo hành</span>
+                </div>
+                <div class="row_bh">
+                    <div class="col-lg-9">
+                            <div class="col-lg-4">
+                                <div price="890000" content="" data="warranty_item" name="warranty_title" name-item="dGold" warranty_id="18" class="item_price item_wan warranty_item item_wan_18">
+
+                                    <img src="https://didongthongminh.vn/images/warranty/original/dgold_1649403735.svg" style="width: 104px; height: 128px;" alt="dGold" class="img-responsive">
+                                    <div class="r_bh">
+                                        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        <i class="fa fa-square-o" aria-hidden="true"></i>
+                                        <p>Gói bảo hành <span>dGold</span></p>
+                                        <span>890.000đ</span>
+                                        <img src="https://didongthongminh.vn/modules/products/assets/images/3sao.svg" alt="dGold" class="img-responsive">
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="clearfix"></div>
+                            <div class="warranty_content">
+                                <ul>
+                                    <li>
+                                        <img src="assets/icon_bh.svg" style="width: 31px; height: 38px;" alt="">
+                                        1 đổi 1 trong vòng 12 tháng, đổi nhanh trong 48 giờ
+                                    </li>
+                                    <li>
+                                        <img src="assets/icon_bh.svg" style="width: 31px; height: 38px;" alt="">
+                                        Tặng combo 1,5 triệu sạc cáp nhanh, ốp, 04 lần dán màn&nbsp;( 01 lần thay pin&nbsp;miễn phí trong 2 năm&nbsp;với iPhone )
+                                    </li>
+                                    <li>
+                                        <img src="assets/icon_bh.svg" style="width: 31px; height: 38px;" alt="">
+                                        Ngoại trừ lỗi người dùng&nbsp;rơi vỡ, vào nước
+                                    </li>
+                                    <li >
+                                        <img src="assets/icon_bh.svg" style="width: 31px; height: 38px;" alt="">
+                                        Miễn phí công thay, chỉ tính phí linh kiện khi phát sinh lỗi người dùng
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="left_bh">
+                            <p>Tổng tiền</p>
+                            <span class="total_bh">13.990.000đ</span>
+                            <a href="#" class="buy_bh" onclick="order(67599, 0)">Mua gói bảo hành này</a>
+                        </div>
+                    </div>
+                </div>
+             </div>
+         </div>
+        <!-- BÀI VIẾT ĐÁNH GIÁ -->
+         <div class="conten_detail">
+            <div class="row_content-detail">
+                <div class="detail_bottom">
+                    <div class="title_box">
+                        <img src="assets/icon_wan.svg" alt="icon" class="img-responsive icon_cat">
+                        <span>Bài viết đánh giá</span>
+                    </div>
+    
+                    <!-- <div class="boxdesc" id="boxdesc" style="height: auto;" data-height="500">
+                        <script type="text/javascript" src="templates/default/js/jquery.lazy.min.js"></script>
+                        <script type="text/javascript" src="templates/default/js/jquery.lazy.youtube.min.js"></script>
+                        <div style="background-color:#ecf0f1">
+                        <p style="text-align:center">&nbsp;</p>
+                        <h1 style="line-height:1.38; margin-top:27px; margin-bottom:8px">
+                            <span style="font-size:20pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">Có nên mua iPhone 12 Pro Max Cũ 2 Sim bản CH/A hay không?</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </h1>
+                        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+                        <div class="youtube" data-embed="nuP_wZHbv0s">
+                            <img src="/images/play_youtube.svg" alt="Play button" class="play-btn">
+                            <img src="https://img.youtube.com/vi/nuP_wZHbv0s/sddefault.jpg">
+                        </div>
+                        
+                        <p></p>
+
+                        <p style="line-height:1.38">
+                            <span style="font-size:11pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">Ngoài những chiếc iPhone bản VN/A thị trường Việt Nam còn có các bản của các nước khác như LL/A, J/A,... bản quốc tế. Vậy
+                                                    <a href="https://www.gsmarena.com/" rel="nofollow" target="_blank"> iPhone CH/A</a> 
+                                                    là của nước nào? Dùng có tốt hay không? Đọc ngay bài viết dưới đây để biết thêm chi tiết.
+                                                </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </p>
+    
+                        <h2 style="line-height:1.38; margin-top:24px; margin-bottom:8px" id="Nguồn_gốc_xuất_xứ_của_iPhone_12_Pro_Max_bản_CH/A">
+                            <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">Nguồn gốc xuất xứ của iPhone 12 Pro Max bản CH/A</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </h2>
+                        
+                        <p style="line-height:1.38">
+                            <span style="font-size:11pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">
+                                                    iPhone bản CH/A là những chiếc điện thoại cho chính công ty Apple sản xuất trên thị trường Trung Quốc. Do đó chất lượng iPhone bản CH/A cũng không khác gì những máy chính hãng của các nước khác bán ra. Người dùng hoàn toàn có yên tâm sử dụng máy bình thường.&nbsp;
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        <img alt="iPhone-12-Pro-Max-cu-dep-nhu-moi" src="https://didongthongminh.vn/upload_images/images/2022/12/08/iPhone-12-Pro-Max-cu(1).jpg" class="lazy-loaded">
+                        <p style="line-height:1.38">
+                            <span style="font-size:11pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">
+                                                    Tuy nhiên điểm mạnh của bản CH/A này là hỗ trợ 2 SIM vật lý cho phép người dùng có thể sử dụng linh hoạt trong việc sử dụng SIM đặc biệt đối với những ai có thói quen hay đổi SIM liên tục.
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        
+                        <p style="line-height:1.38">
+                            <strong>Hình ảnh thực tế khách hàng mua iPhone cũ tại Di Động Thông Minh</strong>
+                        </p>
+                        
+                        <p style="line-height:1.38">
+                            <strong>
+                                <img alt="" data-src="/upload_images/images/2024/02/28/8.jpg" style="width: 1200px; height: 675px;" src="assets/8.jpg" class="lazy-loaded">
+                            </strong>
+                        </p>
+                        
+                        <h2 style="line-height:1.38; margin-top:24px; margin-bottom:8px" id="Ưu_điểm_của_iPhone_12_Pro_Max_bản_CH/A">
+                            <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">Ưu điểm của iPhone 12 Pro Max bản CH/A</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </h2>
+                        
+                        <p><img alt="iPhone-12-Pro-Max-like-new" src="assets/iPhone-12-Pro-Max-cu2.jpg"></p>
+                        
+                        <p style="line-height:1.38">
+                            <span style="font-size:11pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">
+                                                    iPhone bản CH/A dành cho thị trường Trung Quốc được trang bị đầy đủ như các thị trường quốc tế khác. Trong đó điểm để người dùng đáng chú ý nhất iPhone CH/A hỗ trợ sử dụng 2 SIM vật lý giúp người dùng có thể sử dụng thiết bị một cách linh hoạt.
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        
+                        <h2 style="line-height:1.38; margin-top:24px; margin-bottom:8px" id="Nhược_điểm_của_iPhone_12_Pro_Max_bản_CH/A">
+                            <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">Nhược điểm của iPhone 12 Pro Max bản CH/A</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </h2>
+                        
+                        <p style="line-height:1.38">
+                            <span style="font-size:11pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">
+                                                    Ngoài những điểm cộng thì iPhone CH/A cũng có một số điểm hạn chế nho nhỏ như không thể kích hoạt tính năng FaceTime Audio bỏi đây là thỏa thuận giữa Apple với các nhà mạng Trung Quốc.
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        <img src="https://didongthongminh.vn/upload_images/images/2023/04/01/12_pro_max_cu%CC%83_didongthongminh.jpg">
+                        <p style="line-height:1.38">
+                            <span style="font-size:11pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">
+                                                    Tuy nhiên người dùng vẫn có thể sử dụng được các tính năng Facetime Video hay nhiều phần mềm OTP khác có tính năng tương tự hay các phần mềm hỗ trợ liên lạc phổ biến khác.&nbsp;
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        
+                        <h2 style="line-height:1.38; margin-top:24px; margin-bottom:8px" id="iPhone_12_Pro_Max_bản_CH/A_dùng_có_tốt_hay_không_">
+                            <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">iPhone 12 Pro Max bản CH/A dùng có tốt hay không?</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </h2>
+                        
+                        <p><img alt="Thiet-ke-iPhone-12-Pro-Max-cu-512GB" data-src="https://didongthongminh.vn/upload_images/images/2022/12/24/iPhone-12-Pro-Max-cu-512GB_(8).png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></p>
+                        
+                        <p style="line-height:1.38">
+                                <span style="font-size:11pt; font-variant:normal; white-space:pre-wrap">
+                                    <span style="font-family:Arial,sans-serif"><span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">
+                                                    Đây là câu hỏi được người dùng quan tâm nhất vì luôn có nỗi lo sợ sử dụng sản phẩm iPhone có nguồn gốc xuất xứ từ Trung Quốc. Nhưng người dùng không biết rằng hầu hết các bản iPhone trên thế giới đều được lắp đặt tại Trung Quốc đều phải trải qua các bước test kiểm tra nghiêm ngặt của Apple nên chất lượng của các nước đều giống nhau.&nbsp;
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        
+                        <h2 style="line-height:1.38; margin-top:24px; margin-bottom:8px" id="iPhone_12_Pro_Max_bản_CH/A_là_máy_lock_hay_quốc_tế_">
+                            <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">iPhone 12 Pro Max bản CH/A là máy lock hay quốc tế?</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </h2>
+                        
+                        <p><img alt="hieu-nang-iPhone-12-Pro-Max-cu-512GB" data-src="https://didongthongminh.vn/upload_images/images/2022/12/24/iPhone-12-Pro-Max-cu-512GB.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></p>
+                        
+                        <p style="line-height:1.38">
+                            <span style="font-size:11pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">
+                                                    iPhone 12 Pro Max bản CH/A là bản sản xuất trên trị trường Trung Quốc được coi là hàng chính hãng là hàng quốc tế chứ không phải hàng lock kém chất lượng. Nên người dùng hoàn toàn có thể yên tâm bởi bản CH/A này sẽ nhận hết mọi SIM của các nhà mạng trên thế giới và không bị hạn chế hay sử dụng SIM ghép.
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        
+                        <h2 style="line-height:1.38; margin-top:24px; margin-bottom:8px" id="iPhone_12_Pro_Max_bản_CH/A_có_khác_gì_so_với_bản_LL/A_và_VN/A_">
+                            <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">iPhone 12 Pro Max bản CH/A có khác gì so với bản LL/A và VN/A&nbsp;</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </h2>
+                        
+                        <p><img alt="co-nen-mua-iPhone-12-Pro-Max-cu" data-src="https://didongthongminh.vn/upload_images/images/2022/12/24/iPhone-12-Pro-Max-cu-512GB_(5).png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></p>
+                        
+                        <p style="line-height:1.38">
+                            <span style="font-size:11pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">Ở mỗi quốc gia và mỗi khu vực, Apple sẽ đặt ra các tiêu chuẩn về phần cứng khác nhau đây chính là quy định riêng tương kèm theo chế độ và các ưu đãi khác. Tuy nhiên, các mã iPhone của các quốc gia đều được Apple sản xuất giống nhau về thiết kế, cấu hình, và công nghệ cũng như tính năng. Nếu có sự khác biệt thì cũng chỉ thay đổi về linh kiện và chế độ bảo hành ở mỗi quốc gia. Vì vậy chất lượng máy của CH/A đều sẽ giống tương tự các mã của các quốc gia khác.</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        
+                        <h2 style="line-height:1.38; margin-top:24px; margin-bottom:8px" id="Có_nên_mua_iPhone_12_Pro_Max_bản_CH/A_không_">
+                            <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">Có nên mua iPhone 12 Pro Max bản CH/A không?</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </h2>
+                        
+                        <p style="line-height:1.38">
+                            <span style="font-size:11pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">Nhìn chung thì iPhone 12 Pro Max bản CH/A hoàn toàn là sự lựa chọn đáng cân nhắc để người dùng chọn mua. Đặc biệt với những ưu điểm tuyệt vời của dòng sản phẩm này từ việc hỗ trợ 2 SIM vật lý và giá bán cạnh tranh trên thị trường thì người dùng không có lý do nào để bỏ qua một sản phẩm chất lượng với giá tốt như vậy.</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        
+                        <h2 style="line-height:1.38; margin-top:24px; margin-bottom:8px" id="Mua_iPhone_12_Pro_Max_bản_CH/A_ở_đâu_uy_tín_chất_lượng">
+                            <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">Mua iPhone 12 Pro Max bản CH/A ở đâu uy tín chất lượng</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </h2>
+
+                        <p><img alt="mua-iPhone-12-Pro-Max-cu-gia-re-o-dau" data-src="https://didongthongminh.vn/upload_images/images/2022/12/08/iPhone-12-Pro-Max-cu_(2).jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></p>
+                        
+                        <p style="line-height:1.38">
+                            <span style="font-size:11pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif"><span style="color:#ff9900">
+                                        <span style="font-weight:400"><span style="font-style:normal">
+                                            <span style="text-decoration:none">Di Động Thông Minh </span>
+                                        </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                            <span style="font-size:11pt; font-variant:normal; white-space:pre-wrap">
+                                <span style="font-family:Arial,sans-serif">
+                                    <span style="color:#000000">
+                                        <span style="font-weight:400">
+                                            <span style="font-style:normal">
+                                                <span style="text-decoration:none">
+                                                    hiện là địa chỉ phân phối smartphone uy tín, đa dạng dòng sản phẩm. Tại đây, với đội ngũ nhân viên giàu kinh nghiệm, được đào tạo bài bản cùng phong cách phục vụ nhất nhất tuân thủ giá trị cốt lõi “Khách hàng là ông chủ” chắc chắn mang đến sự hài lòng tuyệt đối cho khách hàng.&nbsp;
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        
+                            <p style="text-align:center"><br>
+                            &nbsp;</p>
+                        </div>
+    
+                        <p>&nbsp;</p>
+                        <script>
+                            $(function () {
+                                $("iframe[data-src]").Lazy();
+                            });
+                        </script>
+                    </div>  
+    
+                    <div class="row">
+    
+                    </div>
+    
+                    <div class="clearfix"></div> -->
+    
+                    <!-- <a class="details_click clickmore" data-class="1" data-id="boxdesc">Xem thêm</a> -->
+                    <!-- ĐÁNH GIÁ VÀ COMMENT -->
+                    <div class="box_comments">
+                        <h3 class="title_tab">Đánh giá iPhone 12 Pro Max 256GB Cũ Nguyên Bản Đẹp Như Mới 2 Sim Vật Lý</h3>
+                        <div class="row_cmt">
+                            <div class="content7_1 col-md-3">
+                                <p class="p34">4.9<span>/5</span></p>
+                                <div class="star-detail" data-rating="4.9" title="gorgeous"><img alt="1" src="assets/star-fill.png" title="gorgeous">&nbsp;
+                                    <img alt="2" src="assets/star-fill.png" title="gorgeous">&nbsp;
+                                    <img alt="3" src="assets/star-fill.png" title="gorgeous">&nbsp;
+                                    <img alt="4" src="assets/star-fill.png" title="gorgeous">&nbsp;
+                                    <img alt="5" src="assets/star-fill.png" title="gorgeous">
+                                    <input id="score" name="score" type="hidden" value="4.9" readonly="">
+                                </div>
+                                <p class="p35">(15 đánh giá )</p>
+                            </div>
+                            
+                            <div class="content7_2 col-md-6">
+                                <div class="rating">
+                                    <div class="phantram_sao">
+                                        <div class="p77">
+                                            <img data-src="assets/star-fill.png" width="15" height="14" alt="icon" src="assets/star-fill.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-fill.png" width="15" height="14" alt="icon" src="assets/star-fill.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-fill.png" width="15" height="14" alt="icon" src="assets/star-fill.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-fill.png" width="15" height="14" alt="icon" src="assets/star-fill.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-fill.png" width="15" height="14" alt="icon" src="assets/star-fill.png" class="lazy-loaded">
+                                        </div>
+        
+                                        <div class="progess1">
+                                            <div class="progress">
+                                                <div class="progress-bar">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="p8_sao">93%</p>
+                                    </div>
+
+                                    <div class="phantram_sao">
+                                        <div class="p77">
+                                            <img data-src="assets/star-fill.png" width="15" height="14" alt="icon" src="assets/star-fill.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-fill.png" width="15" height="14" alt="icon" src="assets/star-fill.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-fill.png" width="15" height="14" alt="icon" src="assets/star-fill.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-fill.png" width="15" height="14" alt="icon" src="assets/star-fill.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-empty.png" width="15" height="14" alt="icon" src="assets/star-empty.png" class="lazy-loaded">
+                                        </div>
+        
+                                        <div class="progess1">
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width:7%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="p8_sao">7%</p>
+        
+                                    </div>
+
+                                    <div class="phantram_sao">
+                                        <div class="p77">
+                                            <img data-src="assets/star-fill.png" width="15" height="14" alt="icon" src="assets/star-fill.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-fill.png" width="15" height="14" alt="icon" src="assets/star-fill.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-fill.png" width="15" height="14" alt="icon" src="assets/star-fill.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-empty.png" width="15" height="14" alt="icon" src="assets/star-empty.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-empty.png" width="15" height="14" alt="icon" src="assets/star-empty.png" class="lazy-loaded">
+                                        </div>
+        
+                                        <div class="progess1">
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 0%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="p8_sao">0%</p>
+        
+                                    </div>
+
+                                    <div class="phantram_sao">
+                                        <div class="p77">
+                                            <img data-src="assets/star-fill.png" width="15" height="14" alt="icon" src="assets/star-fill.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-fill.png" width="15" height="14" alt="icon" src="assets/star-fill.png" class="lazy-loaded">
+                                        </div>
+        
+                                        <div class="p77">
+                                            <img data-src="assets/star-empty.png" width="15" height="14" alt="icon" src="assets/star-empty.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-empty.png" width="15" height="14" alt="icon" src="assets/star-empty.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-empty.png" width="15" height="14" alt="icon" src="assets/star-empty.png" class="lazy-loaded">
+                                        </div>
+        
+                                        <div class="progess1">
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 0%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="p8_sao">0%</p>
+        
+                                    </div>
+
+                                    <div class="phantram_sao">
+                                        <div class="p77">
+                                            <img data-src="assets/star-fill.png" width="15" height="14" alt="icon" src="assets/star-fill.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-empty.png" width="15" height="14" alt="icon" src="assets/star-empty.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-empty.png" width="15" height="14" alt="icon" src="assets/star-empty.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-empty.png" width="15" height="14" alt="icon" src="assets/star-empty.png" class="lazy-loaded">
+                                        </div>
+                                        <div class="p77">
+                                            <img data-src="assets/star-empty.png" width="15" height="14" alt="icon" src="assets/star-empty.png" class="lazy-loaded">
+                                        </div>
+        
+                                        <div class="progess1">
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 0%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="p8_sao">0%</p>
+        
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="content7_3 col-md-3">
+                                <p class="p37_">
+                                    <a class="p37" href="#" data-toggle="" aria-expanded="" aria-controls="">
+                                        <span class="a6">Viết đánh giá</span>
+                                        <!-- <span class="a6_">Đóng bình luận</span> -->
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="comments">
+                            <!-- FORM COMMENT -->
+                            <!-- <div class="comment_form cf collapse" id="comment_form">
+                                <form action="index.php?module=products&amp;view=product&amp;task=save_comment" method="post" name="comment_add_form" id="comment_add_form" class="form_comment row">
+                                    <div class="row-rating fl col-sm-12">
+                                        <div class="label-form fl">Đánh giá của bạn về sản phẩm:</div>
+                                        <div class="row-raty cf fl">
+                                            <span class="fl"></span>
+                                            <div class="fl rating-value" style="cursor: pointer;"><img alt="1" src="assets/star-empty.png" title="bad">&nbsp;<img alt="2" src="https://didongthongminh.vn/templates/default/images/star-empty.png" title="poor">&nbsp;<img alt="3" src="https://didongthongminh.vn/templates/default/images/star-empty.png" title="regular">&nbsp;<img alt="4" src="https://didongthongminh.vn/templates/default/images/star-empty.png" title="good">&nbsp;<img alt="5" src="https://didongthongminh.vn/templates/default/images/star-empty.png" title="gorgeous"><input id="value" name="value" type="hidden"></div>
+                                        </div>
+                                        <div class="row-raty fl cf">
+                                            <span class="fl ratingbg"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <textarea class="form-control" id="full_rate" placeholder="Nội dung đánh giá của bạn " rows="6" name="full_rate"></textarea>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-6 ">
+                                                <input type="text" id="name_rate" name="name_rate" placeholder="Họ và tên" value="" class="form-control mb">
+                                                <input type="text" id="email_rate" name="email_rate" placeholder="Email" value="" class="form-control">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" id="phone_rate" name="phone_rate" placeholder="Số điện thoại" class="form-control mb">
+                                                <input type="button" class="button submitbt" value="GỬI ĐÁNH GIÁ" id="submitbt">
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <input type="hidden" value="67599" name="record_id" id="record_id">
+                                    <input type="hidden" value="https://didongthongminh.vn/iphone-12-pro-max-cu-dep-256gb-2sim" name="return">
+                                </form>
+                            </div> -->
+                        
+                            <div class="clearfix"></div>
+                            <div class="comments_contents scroll_comment">
+                                <div id="list-comment">	
+                                    <div class="comment-item">
+                                        <div class="wrapper_comment_content fl ">
+                                            <div class="info_cm "> 
+                                                <span class="name "><strong class="text_b_cm">Nguyen Hoang</strong></span>
+                                            </div> 
+                                        </div>
+
+                                        <div class="star-detail fl" data-rating="4" title="good">
+                                            <img alt="1" src="assets/star-fill.png" title="good">&nbsp;
+                                            <img alt="2" src="assets/star-fill.png" title="good">&nbsp;
+                                            <img alt="3" src="assets/star-fill.png" title="good">&nbsp;
+                                            <img alt="4" src="assets/star-fill.png" title="good">&nbsp;
+                                            <img alt="5" src="assets/star-empty.png" title="good">
+                                            <input id="score" name="score" type="hidden" value="4" readonly="">
+                                        </div>
+
+                                        <span class="date"> | &nbsp;&nbsp;&nbsp;  10:53:14 13/05/2024 </span>
+                                        
+                                        <div class="comment_content ">Sản phẩm này còn k*****</div>
+                                        <div class="wrapper-admin-rep">
+                                            <div class="wrapper_comment_content ">
+                                                <div class="info_cm "> 
+                                                    <span class="name ">
+                                                        <span class="text_b_cm">admin</span>
+                                                        <span class="text_qtv">QTV</span>
+                                                    </span>
+                                                </div> 
+                                                <div class="comment_content "> Dạ chào bạn! Hôm nay sẽ có nhân viên bên Shop liên lạc gửi thông tin mã giảm giá cho bạn ạ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            <!-- <script>
+                                $('.star-detail').raty({
+                                    halfShow : true,
+                                        readOnly: true, 
+                                        score: function() {
+                                            return $(this).attr('data-rating');
+                                        },
+                                        starOff : 'https://didongthongminh.vn/templates/default/images/star-empty.png',
+                                        starOn  : 'https://didongthongminh.vn/templates/default/images/star-fill.png'
+                                });
+                            </script> -->
+                                </div>
+
+                                <div class="text-center">
+                                    <div class="view-more-cm">
+                                        Xem thêm
+                                    </div>
+                                </div>
+                                
+                                <input type="hidden" id="total_page" name="total_page" value="1">
+                                    <input type="hidden" id="record_id" value="67599">
+                                    <input type="hidden" id="url_current" name="url_current" value="/iphone-12-pro-max-cu-dep-256gb-2sim">
+                            </div>
+                        </div>
+
+                        <input type="hidden" id="prd_id" value="67599 ">
+                    </div>
+                </div>
+    
+                <div class="left_bottom">
+                    <div class="col-sm-4" id="thongso">
+                        <div class="_characteristic">
+                            <div class="title_box">
+                                <img src="https://didongthongminh.vn/modules/products/assets/images/thongso.svg" alt="icon" class="img-responsive icon_cat">
+                                <span>Thông số kỹ thuật </span>
+                            </div>
+                             <table class="charactestic_table"></table>
+                            <div id="load_more_charactestic" data-toggle="modal">
+                                <span>Xem cấu hình chi tiết</span>
+                            </div>
+    
+                            <div id="charactestic_detail" class="modal fade">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <!-- <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <h3 class="modal-title">
+                                                <span>Thông số kỹ thuật chi tiết iPhone 12 Pro Max 256GB Cũ Nguyên Bản Đẹp Như Mới 2 Sim Vật Lý</span></h3>
+                                        </div> -->
+                                        <div class="content">
+                                            <table class="charactestic_table_detail" cellpadding="8px" width="100%">
+                                    </table>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div id="new_related" class="new_related_mb">
+                            <div class="title_box">
+                                <img alt="icon" class="img-responsive icon_cat" src="https://didongthongminh.vn/modules/products/assets/images/new.svg">
+                                <span>Tin tức </span>
+                            </div>
+
+                            <div class="relate_content">
+                                <div class="media-TinTuc">
+                                    <div class="media-img">
+                                            <img alt="" data-src=""  src="assets/iphone-12-pro-max-cu-1280-×-720-px_1670430814.png" class="lazy-loaded">
+                                    </div>
+                                    
+                                    <div class="media-body">
+                                        <div class="media-heading">
+                                            Có nên mua iPhone 12 Pro Max năm 2022,2023 - Bí mật shock 12... <!-- <a href="#" class="title_new" title="" ></a>-->
+                                        </div>
+                                        <div class="bot_item">
+                                            <div class="bot_item--icon_time">
+                                                <img src="assets/time.svg" alt="">
+                                                <span>24/11/2022</span>
+                                            </div>
+                                            <div class="bot_item--icon_view">
+                                                <img src="assets/view.svg" alt="">
+                                                <span>10919</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relate_content">
+                                <div class="media-TinTuc">
+                                    <div class="media-img">
+                                            <img alt="" data-src=""  src="assets/iphone-12-pro-max-cu-1280-×-720-px_1670430814.png" class="lazy-loaded">
+                                    </div>
+                                    
+                                    <div class="media-body">
+                                        <div class="media-heading">
+                                            Có nên mua iPhone 12 Pro Max năm 2022,2023 - Bí mật shock 12... <!-- <a href="#" class="title_new" title="" ></a>-->
+                                        </div>
+                                        <div class="bot_item">
+                                            <div class="bot_item--icon_time">
+                                                <img src="assets/time.svg" alt="">
+                                                <span>24/11/2022</span>
+                                            </div>
+                                            <div class="bot_item--icon_view">
+                                                <img src="assets/view.svg" alt="">
+                                                <span>10919</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="product-item" id="same">
+                <div class="box_productsame">
+                    <div class="title_box">
+                        <img data-src="" alt="Điện thoại" class="img-responsive icon_cat lazy-loaded" src="https://didongthongminh.vn/images/products/cat/original/dienthoai_1637510220.svg">
+                        <span>Sản phẩm cùng phân khúc</span>
+                    </div>
+
+                    <div class="box_overflow">
+                        <div class="row row-same">
+                            <div class="col-sm-5ths">
+                                <div class="frame">
+                                    <a href="#">
+                                        <div class="product_image sticky">
+                                            <img data-src="" alt="" class="" onerror="" src="https://didongthongminh.vn/images/products/2024/12/19/resized/xiaomi-redmi-14r-5g-tim-didongthongminh.webp">
+                                        </div>
+                                        <div class="frame_title">
+                                            <h3>Xiaomi Redmi 14R 5G 4GB/128GB mới nguyên seal</h3>
+                                        </div>
+                                        <div class="frame_price">
+                                            <span class="price">2.990.000đ </span>
+                                            <span class="price_old">4.990.000đ</span>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </a>
+                                    <div class="button_bot">
+
+                                    </div>
+                                    <p class="sosanh">So sánh</p>
+                                </div>    
+                            </div>
+                            
+                            <div class="col-sm-5ths">
+                                    <div class="frame">
+                                        <a href="#">
+                                            <div class="product_image sticky">
+                                                <img data-src="" alt="Xiaomi 14 Pro 16GB/1TB fullbox Mở seal " class="img-responsive img_org lazy-loaded" src="https://didongthongminh.vn/images/products/2024/12/14/resized/1947f6a1ae22797c2033-copy-copy.webp">
+                                            </div>
+                                            <div class="frame_title">
+                                                <h3>Xiaomi 14 Pro 16GB/1TB fullbox Mở seal </h3>
+                                            </div>
+                                            <div class="frame_price">
+                                                <span class="price">13.490.000đ </span>
+                                                <span class="price_old">20.990.000đ</span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </a>
+                                        <div class="button_bot">
+                                            <div>
+                                                <span class="green_cl bt_cl">Trả góp 0%</span>
+                                            </div>
+                                        </div>
+                                        <p class="sosanh">So sánh</p>
+                                    </div>
+                            </div>
+
+                            <div class="col-sm-5ths">
+                                    <div class="frame">
+                                        <a href="#">
+                                            <div class="product_image sticky">
+                                                <img data-src="" alt="Xiaomi Redmi 13R 6/128GB giá rẻ" class="img-responsive img_org lazy-loaded" src="https://didongthongminh.vn/images/products/2024/12/21/resized/xiaomiredmi13r5g_4gb_128gb_green-copy.jpeg">
+                                            </div>
+                                            <div class="frame_title">
+                                                <h3>Xiaomi Redmi 13R 6/128GB giá rẻ</h3>
+                                            </div>
+                                            <div class="frame_price">
+                                                <span class="price">2.690.000đ</span>
+                                                <span class="price_old">2.990.000đ</span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </a>
+                                        <div class="button_bot">
+                                            <div>
+                                                <span class="green_cl bt_cl">Trả góp 0%</span>
+                                            </div>
+                                        </div>
+                                        <p class="sosanh">So sánh</p>
+                                    </div>
+                            </div>
+
+                            <div class="col-sm-5ths">
+                                    <div class="frame">
+                                        <a href="#">
+                                            <div class="product_image sticky">
+                                                <img data-src="" alt="Realme Neo 7 5G 12GB/256GB mới nguyên seal" class="img-responsive img_org lazy-loaded" src="https://didongthongminh.vn/images/products/2024/12/21/resized/realme-neo-7-didongthongminh-9.webp">
+                                                                                </div>
+                                            <div class="frame_title">
+                                                <h3>Realme Neo 7 5G 12GB/256GB mới nguyên seal</h3>
+                                            </div>
+                                            <div class="frame_price">
+                                                <span class="price">7.690.000đ </span>
+                                                <span class="price_old">9.990.000đ</span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </a>
+                                        <div class="button_bot">
+                                            <div>
+                                                <span class="green_cl bt_cl">Trả góp 0%</span>
+                                            </div>
+                                        </div>
+                                        <p class="sosanh">So sánh</p>
+                                    </div>
+                            </div>
+                            <div class="col-sm-5ths">
+                                    <div class="frame">
+                                        <a href="#">
+                                            <div class="product_image sticky">
+                                                <img data-src="" alt="Vivo X200 Pro 16GB/̀512GB cũ nguyên bản giá rẻ" class="img-responsive img_org lazy-loaded" src="https://didongthongminh.vn/images/products/2024/12/10/resized/vivo-x200-pro-xanh-sapire-didongthongminh-copy-copy.webp">
+                                            </div>
+                                            <div class="frame_title">
+                                                <h3>Vivo X200 Pro 16GB/̀512GB cũ nguyên bản giá rẻ</h3>
+                                            </div>
+                                            <div class="frame_price">
+                                                <span class="price">19.690.000đ </span>
+                                                <span class="price_old">22.990.000đ</span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </a>
+                                        <div class="button_bot">
+                                            <div>
+                                                <span class="green_cl bt_cl">Trả góp 0%</span>
+                                            </div>
+                                        </div>
+                                        <p class="sosanh">So sánh</p>
+                                    </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<app-footer></app-footer>

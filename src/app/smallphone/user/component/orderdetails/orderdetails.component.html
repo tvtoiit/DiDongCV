@@ -1,0 +1,153 @@
+<app-header></app-header>
+<div id="wrapper">
+    <div class="container-body">
+        <main>
+            <div class="grid-members">
+                <div class="grid-item">
+                    <div class="user-menu-side">
+                        <div class="user-name">
+                            <div class="name">
+                                Xin chào, 
+                                <span>phucnguyenks25</span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li class="">
+                                <div (click)="ThongTinTaiKhoan()">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    Thông tin tài khoản        
+                                </div>
+                            </li>
+                            <li class="selected">
+                                <div (click)="QuanLyDonHang()">
+                                    <i class="fa-brands fa-wpforms"></i>                                    
+                                    Quản lý đơn hàng        
+                                </div>
+                            </li>
+                            <li class="">
+                                <div (click)="DoiMatKhau()">
+                                    <i class="fa fa-lock" aria-hidden="true"></i>
+                                    Đổi mật khẩu        
+                                </div>
+                            </li>
+                            <li class="" (click)="SoDiaChi()">
+                                <div>
+                                    <i class="fa-solid fa-address-card"></i>
+                                    Sổ địa chỉ        
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <i class="fa fa-power-off" aria-hidden="true"></i>
+                                    Đăng xuất        
+                                </div>
+                            </li>
+                        </ul>            
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="user-content-side">
+                        <div class="order-details">
+                            
+                        </div>
+                        <!-- <p>Bạn chưa thực hiện bất kỳ đơn đặt hàng nào trước đó!</p> -->
+                        <div class="order-title">
+                            <aside>
+                                <div>
+                                    <p>
+                                        <span>Chi tiết đơn hàng</span>
+                                        <span>#93633583</span>
+                                    </p>
+                                    <p class="order-title__statusname fail">
+                                        <span> - </span>Đã hủy
+                                        <span>- </span> 17:41 24/03 
+                                    </p>
+                                </div>
+                            </aside>
+                            
+                            <aside>
+                                <p class="order-title__buydate">Đặt lúc: 17:39 Chủ Nhật, 23/03/2025</p>
+                            </aside>
+                            <div class="order-info one-col">
+                                <div class="order-info__user">
+                                    <h2>
+                                        <i class="iconoh-detail_infouser"></i>
+                                        <span>Thông tin nhận hàng</span>
+                                    </h2>
+                                    <div class="order-info__user__customer">
+                                        <span class="order-info__label">Người nhận:</span>
+                                        <p id="receiver-info">
+                                            <span class="order-info__user__customer--name">Anh Tran Van Toi <label>- 0961598116</label></span>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <span class="order-info__label">Địa chỉ:</span>
+                                        <p>không có, Xã Mỹ Cát, Huyện Phù Mỹ, Bình Định</p>
+                                    </div>
+                        
+                                    <div>
+                                        <span class="order-info__label">Giao lúc:</span>
+                                        <p>  Trước 18:00 - Thứ Ba (01/04)</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-detail">
+                            <h2>
+                                <i class="iconoh-detail_product"></i>
+                                <span>Thông tin sản phẩm</span>
+                            </h2>
+                                <div class="product-item ">
+                                    <a href="#"> <img src="https://cdn.tgdd.vn/Products/Images/42/303833/iphone-15-pro-blue-thumbnew-600x600.jpg"></a>
+                                    <div class="product-item__info">
+                                        <a href="#"><p>Điện thoại iPhone 15 Pro 1TB Blue Titanium</p></a>
+                                            <div class="product-item__promotion">
+                                                <small>4 Khuyến mãi</small>
+                                                <aside class="morePro">
+                                                        <span>Phiếu mua hàng AirPods, Apple Watch, Macbook mệnh giá 500.000 VND</span>
+                                                        <span>Phiếu mua hàng mua Tai nghe, Loa, Smartwatch trị giá 500.000đ</span>
+                                                        <span>Phiếu mua hàng mua MLN tặng khách khi mua ICT trị giá 300.000đ</span>
+                                                        <span>Phiếu mua hàng trị giá 50.000đ áp dụng mua sim số</span>
+                                                </aside>
+                                            </div>
+                                            <p class="product-item__quantity">Số lượng: 1</p>
+                                    </div>
+                    
+                                    <div class="product-item__price">
+                                        <p>35.490.000₫</p>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="order-price">
+                            <p>
+                                <span>Tạm tính:</span>
+                                <span>35.490.000₫</span>
+                            </p>
+                            <p class="order-price__total">
+                                <span><b>Cần thanh toán</b></span>
+                                <span>35.490.000₫</span>
+                            </p>
+                        </div>
+                        <div class="order-payment__action" >
+                            <div class="back-to-listing" (click)="backToManeger()">Về trang danh sách đơn hàng</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="alert_modal fade" id="alert_modal">
+            <div class="alert_body">
+                <div class="alert_message" id="alert_message">
+        
+                </div>
+                <a id="a_message" onclick="close_alert()">Đóng</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>

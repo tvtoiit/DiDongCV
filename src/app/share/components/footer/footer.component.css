@@ -1,0 +1,304 @@
+#footer-content{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #52504f;
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+}
+.ft_seomenu{
+    width: 400px;
+    height: auto;
+}
+
+#footer-content .container .bottom-nav{
+    columns: 5;
+}
+
+#footer-content .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    color: #333333;
+    background-color: #F1F1F1;
+    padding: 14px 0;
+    font-size: 14px;
+}
+
+#footer-content .container .bottom-nav li{
+    color: #626262;
+    padding: 0 28px 0 0;
+}
+
+#footer-content .container .bottom-nav a{
+    color: #626262;
+    font-size: 12px;
+}
+
+.ft_container{  
+    /* width: 1200px;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    margin: 0 auto; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    color: #333333;
+    background-color: #ffffff;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+#footer-content .ft_container .footer_ct{
+    columns: 4;
+    width: 1200px;
+    height: 286px;
+    margin: 30px 0 0 0px;
+}
+
+.footer_ct .col-md-3{
+    width: auto;
+    height: 250px;
+    color: #333333;
+    font-size: 14px;
+    padding: 0 10px;
+}
+.footer_ct .col-md-3 p {
+    margin: 0 0 10px;
+}
+
+.footer_ct .col-md-3 .title_item{
+    color: #403d3d;
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+
+.footer_ct .col-md-3 ul li{
+    height: 30px;
+    color: #333;
+    font-size: 14px;
+}
+
+.footer_ct .col-md-3 ul li a{
+    color: #444;
+    height: 16px;
+    font-size: 14px;
+}
+
+.footer_ct .box_hotro .method_bank {
+    height: 76px;
+    display: grid;
+    grid-template-columns: 54px 54px 54px 54px;
+    grid-gap: 10px;
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+
+
+
+
+#footer-content .info{
+    width: 1200px;
+    display: flex;
+    margin: 10px 0 20px 0;
+}
+
+.button-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none; /* Loại bỏ gạch dưới mặc định của thẻ <a> */
+    color: white; /* Màu chữ nếu có */
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-link:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+  }
+  
+  .button-image {
+    width: 139px; /* Đặt kích thước hình ảnh */
+    height: 53px;
+    margin-right: 8px; /* Khoảng cách giữa hình ảnh và chữ */
+  }
+
+.ft_coppyright{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    color: #444444;
+    background-color: #EEEE;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.ft_coppyright .container_cp{
+    color: #444444;
+    margin: 0 ;
+    font-size: 14px;
+    width: 100%;
+    height: 20px;
+    margin: 0 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* chat boxx  */
+ /* Chat icon container */
+.social-icons {
+    position: fixed; /* Đặt phần tử ở vị trí cố định */
+    bottom: 20px; /* Cách đáy màn hình 20px */
+    left: 20px; /* Cách trái màn hình 20px */
+    display: flex;
+    flex-direction: column; /* Sắp xếp icon theo cột */
+    gap: 10px;
+}
+
+/* Mỗi icon chat */
+/* Chat icon container */
+.social-icons {
+    position: fixed; /* Đặt phần tử ở vị trí cố định */
+    bottom: 20px; /* Cách đáy màn hình 20px */
+    left: 20px; /* Cách trái màn hình 20px */
+    display: flex;
+    flex-direction: column; /* Sắp xếp icon theo cột */
+    gap: 10px;
+}
+
+/* Mỗi icon chat */
+.social-icon {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: #3b5998; /* Màu nền Facebook */
+    color: white;
+    border-radius: 50%; /* Tạo hình tròn cho icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà khi hover */
+}
+
+.social-icon.instagram {
+    background-color: #E4405F; /* Màu nền Instagram */
+}
+.social-icon.SMS {
+    background-color: #5ecf3c; /* Màu nền Instagram */
+}
+
+/* Hiển thị text khi hover */
+.social-icon::after {
+    content: ''; /* Không có nội dung mặc định */
+    position: absolute;
+    top: 50%; /* Đặt text nằm ở giữa theo chiều dọc */
+    left: 100%; /* Đặt text ở bên phải của icon */
+    transform: translateY(-50%); /* Căn giữa theo chiều dọc */
+    opacity: 0;
+    font-size: 14px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap; /* Ngăn text bị xuống dòng */
+    transition: opacity 0.3s ease;
+    margin-left: 10px; /* Khoảng cách giữa icon và text */
+}
+
+/* Text hiển thị khi hover */
+.social-icon.facebook:hover::after {
+    content: 'Facebook';
+    opacity: 1;
+}
+
+.social-icon.instagram:hover::after {
+    content: 'Instagram';
+    opacity: 1;
+}
+.social-icon.SMS:hover::after {
+    content: 'SMS';
+    opacity: 1;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Phóng to icon khi hover */
+}
+
+/* Chat Box */
+.chat-box {
+    position: fixed;
+    bottom: 100px; /* Đặt cách đáy màn hình */
+    left: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Ẩn chat box mặc định */
+    flex-direction: column;
+}
+
+.chat-header {
+    background-color: #128c7e;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-body {
+    padding: 10px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.chat-footer {
+    display: flex;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 0 0 8px 8px;
+}
+
+.chat-footer input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+.chat-footer button {
+    background-color: #128c7e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.chat-footer button:hover {
+    background-color: #25d366;
+}

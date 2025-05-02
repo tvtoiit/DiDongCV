@@ -1,0 +1,108 @@
+body{
+    background-color: rgb(179, 177, 177);
+}
+.container-body{
+    display: flex;
+    padding: 5px 0;
+}
+.content-body{
+    width: 100%;
+    height: auto;
+    /* background-color: rgb(204, 204, 204); */
+    padding: 20px;
+}
+
+.admin{
+    background: rgb(79, 90, 89);
+    padding: 16px;
+    width: auto;
+}
+h3{
+    border-bottom: 1px solid rgb(143, 142, 142);
+}
+
+.text, ul li{
+    font-size: 18px;
+    font-weight: none;
+    color: rgb(187, 192, 192);
+}
+
+.text, ul li:hover{
+    color: rgb(196, 238, 238);
+    cursor: pointer;
+}
+
+ul li.selected{
+    color: red;
+}
+ul li.selected:hover{
+    color: rgb(251, 255, 0);
+}
+
+li i{
+    margin: 5px;
+}
+
+/*  btn Them Xuat*/
+.content-body .title{
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0.7;
+}
+.container-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.container-btn .search{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    opacity: 0.5;
+    width: 13%;
+}
+
+.container-btn .button .btn{
+    border: 3px solid rgb(111, 184, 247);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5%;
+    background-color: rgb(111, 184, 247);
+
+}
+
+.container-btn .button .btn:hover{
+    cursor: pointer;
+    background-color: rgb(0, 136, 255);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4), 0px 0px 20px rgba(255, 0, 0, 0.4);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Loại bỏ khoảng cách giữa các ô */
+    margin: 20px 0;
+}
+
+/* Đặt kiểu cho các ô trong bảng */
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd; /* Đặt đường viền nhẹ cho ô */
+}
+
+/* Đặt màu nền cho các tiêu đề */
+th {
+    background-color: #f2f2f2;
+}
+
+/* Tạo hiệu ứng khi di chuột qua dòng */
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Căn giữa cho bảng */
+table {
+    margin-left: auto;
+    margin-right: auto;
+}

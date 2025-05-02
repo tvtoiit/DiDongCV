@@ -1,0 +1,505 @@
+.container-body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+}
+
+#container{
+    width: 1200px;
+    height: auto;
+    padding: 0 10px;
+}
+
+.container{
+    width: 1200px;
+    height: auto;
+    margin: 0 -20px 0 0;
+    padding: 0 10px;
+}
+
+.container-cart{
+    width: 640px;
+    height: auto;
+    margin: 20px auto 40px;
+}
+
+.content-cart{
+    width: 640px;
+    height: auto;
+    border: 1px solid #dddd;
+    border-radius: 5px;
+    background: #fff;
+    filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.1));
+}
+
+.nav-cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 10px;
+}
+.nav-cart .buy-more{
+    font-size: 14px;
+    color: #20863D;
+
+}
+
+/* san pham */
+.product-cart1{
+    padding: 20px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.product-cart{
+    width: 598px;
+    height: auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 3fr 1.5fr;
+}
+.text-center{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.text-center a .img-responsive{
+    display: flex;
+    max-width: 100%;
+    height: auto;
+}
+
+.text-center a .del-pro-link{
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+    justify-content: center;
+}
+.text-center a:nth-child(2):hover{
+    color: #f60;
+}
+.text-center a:nth-child(2)>svg:hover{
+    color: #f60;
+}
+
+.top_detail .product-name{ 
+    font-size: 16px;
+    margin: 0 0 10px;
+    color: #000000;
+}
+.top_detail .product-name:hover{
+    color: #f60;
+}
+
+.product-detail .accessories h4{
+    font-size: 14px;
+    color: #333333;
+    margin: 0 0 10px;
+    font-weight: normal;
+}
+
+.product-detail .accessories ul li{
+    font-size: 14px;
+    margin: 0 0 5px;
+    padding: 0 0 0 20px;
+}
+.product-detail .accessories ul  img{
+    width: 16px;
+    height: 16px;
+}
+
+.product-detail .accessories .view_more {
+    color: #20863D;
+    display: inline-block;
+    cursor: pointer;
+    margin: 5px 0 15px 0;
+    font-size: 14px;
+}
+
+.product-detail .box_color .select_color {
+    display: inline-block;
+    color: #20863D;
+    cursor: pointer;
+    font-size: 14px;
+}
+/* so luong */
+.product-price{
+    display: block;
+    justify-items: flex-end;
+}
+.product-price .fee{
+    display: block;
+    justify-content: flex-end;
+    font-size: 14px;
+    margin: 0 0 20px;
+}
+
+.product-price .fee p{
+    color: #FF6700;
+    margin-bottom: 5px;
+}
+.product-price .fee del{
+    text-decoration: line-through;
+}
+
+.quan .number-input{
+    display: flex;
+    align-items: center;
+}
+
+.quan input {
+    font-family: GoogleSansBold;
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    width: 60px;
+    height: 30px;
+    appearance: textfield;
+    color: #333333;
+    font-size: 15px;
+    box-shadow: none;
+    border-radius: 0px;
+    line-height: 22px;
+    outline: none;
+    text-align: center;
+}
+
+.quan button {
+    outline: none;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 0;
+    /* background-color: unset; */
+    border-radius: 2px;
+    border: 1px solid #ededed;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* tam tinh san pham */
+.total-price-products{
+    padding: 20px;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.total-price-products p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    line-height: normal;
+    font-size: 14px;
+}
+
+/* thong tin muua hang */
+.formPayment {
+    padding: 20px;
+}
+
+.h3_title{
+    color: #333333;
+    font-size: 16px;
+    margin: 20px 0 10px;
+}
+
+.formPayment .radio-gender{
+    /* display: flex; */
+    height: 22px;
+}
+
+.formPayment label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 25px 5px 5px;
+}
+
+.formPayment label input {
+    height: 15px;
+    width: 15px;
+    line-height: normal;
+}
+
+.formPayment label span {
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.formPayment .row-customer {
+    display: flex;
+    width: 618px;
+    justify-content: space-between;
+}
+
+.formPayment .row .row_customer{
+    width: 100%;
+}
+
+.formPayment .row-customer .row_customer {
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.formPayment .row-customer .row_customer input {
+    height: 40px;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font-size: 14px;
+}
+
+.formPayment .row-customer .row_customer .form-control-customer{
+    width: 289px;
+}
+
+
+.formPayment .typeReceive{
+    height: 22px;
+}
+
+.tabReceive {
+    background: #F0F0F0;
+    border-radius: 3px;
+    padding: 20px;
+    position: relative;
+}
+
+p {
+    width: auto;
+    height: 17px;
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+
+/* tinh va quan */
+.text_delivery, select, .addDress{
+    width: 274px;
+    height: 40px;
+    margin: 0 0 10px;
+    padding: 0 5px;
+    border: 1px solid #F0F0F0;
+    border-radius: 7px;
+}
+.Tinh_Quan{
+    display: flex;
+    justify-content: space-around;
+}
+.Phuong{
+    display: flex;
+    justify-content: space-around;
+}
+
+.request_orther{
+    padding: 20px 0px;
+    height: 80px;
+}
+input#note {
+    width: 598px;
+    height: 40px;
+    padding: 5px 20px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 5px 20px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+
+
+.box_same .check-show-hide {
+    display: flex;
+    font-weight: bold;
+    
+}
+
+.box_same .add_same_address {
+    padding: 28px 20px 10px 20px;
+    position: relative;
+    background: #f0f0f0;
+    border: 1px solid #F9920F;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+}
+.row .row_ifany{
+    width: 268px;
+    height: 40px;
+}
+.bill-invoice{
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.bill_company .company-invoice{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font-size: 14px;
+}
+
+.formPayment label input {
+    height: 15px;
+    width: 15px;
+    line-height: normal;
+}
+.formPayment label span {
+    margin-left: 5px;
+}
+
+.formPayment .company {
+    margin-bottom: 0;
+}
+.formPayment label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.formPayment label input {
+    height: 15px;
+    width: 15px;
+    line-height: normal;
+}
+.formPayment label span {
+    margin-left: 5px;
+}
+
+.ma_giam {
+    margin-top: 23px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.ma_giam .menubot {
+    display: inline-block;
+    padding: 12px 15px 12px 50px;
+    cursor: pointer;
+    border: 1px solid #F9920F;
+    border-radius: 3px;
+    margin-bottom: 0;
+    text-align: center;
+    height: 43px;
+}
+
+.ma_giam img{
+    width: 26px;
+    height: 16px;
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+.ma_giam .code_down_price {
+    position: relative;
+    background: #f0f0f0;
+    border: 1px solid #F9920F;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+
+.ma_giam .code_down_price input {
+    width: 100%;
+    border: 1px solid #dddddd;
+    height: 35px;
+    padding: 0 14px;
+    border-radius: 3px;
+    outline: none;
+}
+.ma_giam .code_down_price {
+    padding: 20px;
+    background: #F0F0F0;
+}
+
+.ma_giam .code_down_price .add_code_price {
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 9px 0;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+    background: -webkit-linear-gradient(left, #FF6700, #F9920F);
+}
+
+.collapse {
+    display: none;
+    visibility: hidden;
+}
+
+.total_end{
+    width: auto;
+    height: 69px;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 19px;
+    text-align: center;
+
+}
+.total_end span {
+    color: #FF6700;
+}
+
+.btn-area .payment-btn {
+    display: flex;
+    width: 100%;
+    border-radius: 3px;
+    background: -webkit-linear-gradient(left, #FF6700, #F9920F);
+    font-weight: bold;
+    color: #fff;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    padding: 16px 10px;
+    font-size: 16px;
+}
+
+/* click */
+.product-detail .accessories ul li:nth-of-type(1),
+.product-detail .accessories ul li:nth-of-type(2) {
+    display: block !important;
+}
+.product-detail .accessories ul li{
+    display: none;
+}
+
+.check-order__product {
+    display: flex;
+    
+}

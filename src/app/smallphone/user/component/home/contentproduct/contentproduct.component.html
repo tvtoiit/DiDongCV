@@ -1,0 +1,418 @@
+<main id="wrapper"> 
+    <div *ngFor="let category of categories; let i = index" id="container">
+    <aside class="title_product">
+        <!-- Phần danh mục -->
+
+    <!--**************************************************************-->
+    <!--**************************************************************-->
+    <!--**************************************************************-->
+    <!--                      PRODUCTS TABS                           -->
+    <!--**************************************************************-->
+    <!--**************************************************************-->
+    <!--**************************************************************-->
+        <div id="title_menu_tabs">
+            <div class="nav-tabs">
+                <div class="item_tabs">
+                    <a href="" title="iPhone">
+                        
+                            <img src="assets/icon.svg" alt="icon" onerror="this.src=''">
+                            <span class="item_tabs--text">{{(category.name + ' ĐÁNG MUA NHẤT' ).toUpperCase()}} </span>
+                        
+                    </a>
+                </div>
+                <div class="r_tab">
+                    <div class="list_cat">
+                            <div class="item_tabs" id="item_tab_9160">
+                                <a class="mshow" href="">iPhone cũ</a>
+                            </div>
+                            <div class="item_tabs" id="item_tab_9256">
+                                <a class="mshow" href="">iPhone 14 Series</a>
+                            </div>
+                            <div class="item_tabs" id="item_tab_9232">
+                                <a class="mshow" href="">iPhone 13 Pro | Pro Max</a>
+                            </div>
+                            <div class="item_tabs" id="item_tab_921">
+                                <a class="mshow" href="">iPhone 13 Thường-Mini</a>
+                            </div>
+                    </div>
+                    <div class="cout_prd">
+                        <a href="https://didongthongminh.vn/iphone">
+                            Xem tất cả 170 iPhone                            
+                            <i class="fa fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!--**************************************************************-->
+    <!--**************************************************************-->
+    <!--**************************************************************-->
+    <!--                      PRODUCTS ITEMS                          -->
+    <!--**************************************************************-->
+    <!--**************************************************************-->
+    <!--**************************************************************-->
+        <div id="products_all_list">
+        <!-- 1 -->
+            <div *ngFor="let product of category.products; let j = index" id="product_item" (click)="onProductClick(product.productId)">
+                <!-- Hinh sản phẩm -->
+                <img class="img_phone" src="{{product.thumbnail}}" alt="">
+                <!-- tên sản phẩm -->
+                <div class="frame_title">
+                    <h3> {{product.title}}</h3>
+                </div>
+                <!-- Giá sản phẩm -->
+                <div class="frame_price">
+                    <span class="price">
+                        {{(product.price).toLocaleString('vi-VN') + ' đ'}}
+                    </span>
+                    <span class="price_old">
+                        {{(product.discount).toLocaleString('vi-VN') + ' đ'}}
+                    </span>
+                </div>
+                <div class="sale_brief">
+                    <div class="sale_text">
+                        <ul>
+                            <li>Thu cũ đổi mới lên đời giá cao</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Đánh giá -->
+                <div class="rate_like">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>     
+            </div>
+        </div>
+</div>
+    <div>
+        <aside class="title_product">
+            <!-- Phần danh mục -->
+            <div id="title_menu_tabs">
+                <div class="nav-tabs">
+                    <div class="item_tabs">
+                        <a href="" title="iPhone">
+                            
+                                <img src="assets/icon.svg" alt="icon" onerror="this.src=''">
+                                <span class="item_tabs--text">24H CÔNG NGHỆ</span>
+                            
+                        </a>
+                    </div>
+                    <div class="r_tab">
+                        <div class="">
+                                
+                        </div>
+                        <div class="">
+                            <a href="https://didongthongminh.vn/iphone">
+                                Xem tất 66884 tin công nghệ                           
+                                <i class="fa fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="list_new">
+            <div class="title_new">
+                <div class="left_new">
+                    <a href="#">
+                        <picture>
+                            <img class="left_new-img" src="assets/bung-no-uu-dai-khuyen-mai-khai-truong-cung-moc-mobile-banner_1726157696.webp" alt="">
+                        </picture>
+                        <h3 class=" text-color">Bùng nổ ưu đãi - Khuyến mãi khai trương cùng Mộc Mobile</h3>
+                        <p class="summary  text-color">
+                            Mộc Mobile trân trọng gửi đến quý khách chương trình khuyến mại&nbsp;“Bùng nổ ưu đãi - Khuyến mãi khai trương cùng Mộc Mobile” vào lúc 8h30 sáng
+                                &nbsp;ngày Chủ nhật 15/09/2024 tại số 15 Trần Đại Nghĩa, Hai Bà Trưng, Hà Nội
+                        </p>
+                        <div class="bot_item">
+                            <div class="bot_item--icon_time">
+                                <img src="assets/time.svg" alt="">
+                                11/09/2024
+                            </div>
+                            <div class="bot_item--icon_view">
+                                <img src="assets/view.svg" alt="">
+                                <span>327</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="right_new">
+                    <a href="#">
+                            <img class="right_new-img" src="assets/ảnh-màn-hình-2025-01-20-lúc-181108_1737371328.webp" alt="">
+                            <div class="content_new">
+                                <h3 class="text-size  text-color">
+                                    Rước Lộc Vàng, Đón Tết An Khang khi mua iPhone Cũ tại Di Động Thông Minh
+                                </h3>
+                                <div class="bot_item">
+                                    <div class="bot_item--icon_time">
+                                        <img src="assets/time.svg" alt="">
+                                        11/09/2024
+                                    </div>
+                                    <div class="bot_item--icon_view">
+                                        <img src="assets/view.svg" alt="">
+                                        <span>327</span>
+                                    </div>
+                                </div>
+                            </div>
+                    </a>
+
+                    <a href="#">
+                        <img class="right_new-img" src="assets/trang-chu-chinh-810x350_1734767478.webp" alt="">
+                            <div class="content_new">
+                                <h3 class="text-size  text-color">
+                                    Mộc Mobile – Di Động Thông Minh: Check In Liền Tay, Nhận Ngay Phụ Kiện Miễn Phí!
+                                </h3>
+                                <div class="bot_item">
+                                    <div class="bot_item--icon_time">
+                                        <img src="assets/time.svg" alt="">
+                                        11/09/2024
+                                    </div>
+                                    <div class="bot_item--icon_view">
+                                        <img src="assets/view.svg" alt="">
+                                        <span>327</span>
+                                    </div>
+                                </div>
+                            </div>
+                    </a>
+                    <a href="#">
+                        <img class="right_new-img" src="assets/800x-500_1733804394.webp" alt="">
+                            <div class="content_new">
+                                <h3 class="text-size  text-color">
+                                    Câu Chuyện Hình Thành Chương Trình Tặng 1500 Lượt Phụ Kiện Miễn Phí Dành Cho Học Sinh, Sinh Viên
+                                </h3>
+                                <div class="bot_item">
+                                    <div class="bot_item--icon_time">
+                                        <img src="assets/time.svg" alt="">
+                                        11/09/2024
+                                    </div>
+                                    <div class="bot_item--icon_view">
+                                        <img src="assets/view.svg" alt="">
+                                        <span>327</span>
+                                    </div>
+                                </div>
+                            </div>
+                    </a>
+                <a href="#">
+                    <img class="right_new-img" src="assets/2-1_1733757424.webp" alt="">
+                            <div class="content_new">
+                                <h3 class="text-size  text-color">
+                                    Mộc Mobile – Di Động Thông Minh - Điện Thoại Chính Hãng, Giá Học Sinh, Sinh Viên, Trả Góp Siêu Dễ Dàng!
+                                </h3>
+                                <div class="bot_item">
+                                    <div class="bot_item--icon_time">
+                                        <img src="assets/time.svg" alt="">
+                                        11/09/2024
+                                    </div>
+                                    <div class="bot_item--icon_view">
+                                        <img src="assets/view.svg" alt="">
+                                        <span>327</span>
+                                    </div>
+                                </div>
+                            </div>
+                </a>
+                <a href="#">
+                    <img class="right_new-img" src="assets/vivo-iqoo-didongthongminh_1733289409.webp" alt="">
+                    <div class="content_new">
+                        <h3 class="text-size  text-color">
+                            Địa chỉ mua bán sửa chữa Vivo, iQOO cũ mới uy tín tại Hải Phòng
+                        </h3>
+                        <div class="bot_item">
+                            <div class="bot_item--icon_time">
+                                <img src="assets/time.svg" alt="">
+                                11/09/2024
+                            </div>
+                            <div class="bot_item--icon_view">
+                                <img src="assets/view.svg" alt="">
+                                <span>327</span>
+                            </div>
+                        </div>
+                    </div>            
+                </a>
+                </div>
+            </div>
+            <div class="scrollbar">
+                <p>
+                    <img src="assets/he-thong-cua-hang-didongthongminh.webp" alt="">
+                </p>
+                <h1 class="text-color">
+                    <strong>Di Động Thông Minh</strong> - Điện thoại chính hãng giá rẻ
+                </h1>
+                <p>
+                    Cụm từ quen thuộc&nbsp;"Di Động Thông Minh" - hoá ra lại&nbsp;
+                    ẩn chứa đạo&nbsp;lý vận hành của vạn vật. Hãy đọc ngay để hiểu hành trình phát triển thương hiệu của chúng tôi.&nbsp;
+                </p>
+                <p>
+                    <span style="color:#e67e22"><strong>Di Động Thông Minh</strong>
+                    </span>&nbsp;hệ thống kinh doanh Di Động Chính Hãng là đối tác hàng đầu của&nbsp;Apple, Samsung, Xiaomi, Oppo, Realme, LG
+                </p>
+                <ul>
+                    <li>12&nbsp;năm dẫn dắt các trào lưu công nghệ tại Việt Nam.</li>
+                    <li>Hệ thống showroom toàn quốc.</li>
+                    <li>Hệ thống trung tâm bảo hành toàn quốc.</li>
+                    <li>Đảm bảo chất lượng phục vụ 5 sao.&nbsp;</li>
+                </ul>
+                <h2>Ý nghĩa từ Di Động Thông Minh&nbsp;</h2>
+                <p>Di Động Thông Minh kinh doanh trọng tâm là các dòng điện thoại, máy tính bảng, phụ kiện, đồ chơi công nghệ, máy tính doanh nhân, thiết bị smarthome. Sửa chữa điện tử, điện thoại, máy tính.&nbsp;</p>
+                <h2>Sứ mệnh&nbsp;</h2>
+                <blockquote>
+                    <p>Kiến tạo xã hội hạnh phúc <strong><span style="color:#e67e22">Thông Minh</span></strong><strong>&nbsp;trên nền tảng&nbsp;</strong>phát triển công nghệ&nbsp;<span style="color:#27ae60"><strong>Di Động.&nbsp;</strong></span></p>
+                </blockquote>
+                <ul>
+                    <li>Năm 2025 Di Động Thông Minh có 150 cửa hàng toàn quốc.</li>
+                    <li>Nằm trong Top 6 hệ thống kinh doanh các sản phẩm công nghệ lớn nhất Việt Nam</li>
+                </ul>
+                <h2>Triết lý hành động</h2>
+                <p>Di Động Thông Minh là một diệu đế (sự thật)&nbsp;trong tự nhiên: "Vạn vật luôn chuyển động để&nbsp;hướng tới sự thông suốt, tường minh".&nbsp;<br>
+                    VD: Giao thông, dòng nước, sự học tập của đời người, tư duy đều không nằm ngoài nguyên lý&nbsp;trên.</p>
+                <p>Chính vì thế vạn vật không ngừng phát triển, hướng tới kết nối với nhau (Internet of Things), những máy móc vô tri đang dần theo xu hướng nhân bản hoá, biết cách ứng xử với nhau một cách thông minh.&nbsp;</p>
+                <blockquote>
+                    <ul>
+                        <li><strong>Di </strong>truyền tiếp nối vui vẻ và hạnh phúc</li>
+                        <li><strong>Động</strong> lực đổi mới là sống còn</li>
+                        <li><strong>Thông</strong> suốt trên dưới, trong ngoài</li>
+                        <li><strong>Minh</strong> tường trí tuệ - học tập không ngừng&nbsp;</li>
+                    </ul>
+                </blockquote>
+                <h2>3 biểu ngữ trong hành trình phát triển Di Động Thông Minh&nbsp;</h2>
+                <blockquote>
+                <ul>
+                    <li>"Bán hàng là nuôi thân, kết giao bạn bè bốn bể là nuôi dưỡng tâm hồn"&nbsp;</li>
+                    <li>"Khách hàng là ông chủ - và được ưu tiên hàng đầu"</li>
+                    <li>"Tận tình từ lần chạm đầu tiên"&nbsp;</li>
+                </ul>
+                </blockquote>
+                <h2>Ý Nghĩa Biểu Tượng Di Động Thông Minh</h2>
+                <p><img alt="" class="lazy-loaded" data-src="/upload_images/images/2022/logo-ddtm.webp" style="height:135px; width:390px" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></p>
+                <p>Logo Di Động Thông Minh là 1 biểu tượng độc đáo và có nhiều ý nghĩa, có&nbsp;tính ứng dụng cao. Hình lục giác quen thuộc, nhìn như <span style="color:#1abc9c"><strong>ánh mắt thông minh</strong></span> hiện đại.</p>
+                <ul>
+                    <li>Cấu trúc <strong>Nhất Tâm</strong> sinh <strong>Lục Đỉnh</strong>&nbsp;</li>
+                    <li>Hình thái&nbsp;<strong>kim cương</strong> - hướng tới tổ chức bền vững&nbsp;</li>
+                    <li>Nhãn tâm màu xanh - phát triển, vận động, nhận thức không ngừng&nbsp;</li>
+                    <li>Màu cam - thân thiện và chia sẻ&nbsp;</li>
+                    <li>Phát triển&nbsp;tinh hoa phật pháp&nbsp;</li>
+                </ul>
+                <p>Logo của Di Động Thông Minh được ứng dụng để triển khai:&nbsp;</p>
+                <ul>
+                    <li>7 đỉnh phát triển bản thân - nhất định thành công</li>
+                    <li>Marketing 7P</li>
+                </ul>
+                <h2>Lợi ích khi mua hàng&nbsp;tại&nbsp;Di Động Thông Minh</h2>
+                <ul>
+                    <li>
+                    <p>Chất lượng sản phẩm chính hãng</p>
+                    </li>
+                    <li>
+                    <p>Hàng qua sử dụng kiểm định khắt khe&nbsp;</p>
+                    </li>
+                    <li>
+                    <p>Bảo hành uy tín, nhanh chóng&nbsp;</p>
+                    </li>
+                    <li>
+                    <p>Tối đa hoá giá trị sản phẩm trong suốt hành trình sử dụng (Tư vấn, mua hàng, bảo hành, đổi máy lên đời)</p>
+                    </li>
+                    <li>
+                    <p>Phong phú các chương trình chăm sóc khách hàng</p>
+                    </li>
+                    <li>
+                    <p>Quy trình chuyên nghiệp nhanh chóng</p>
+                    </li>
+                    <li>
+                    <p>Nhân sự tư vấn hiểu biết, đam mê công nghệ&nbsp;</p>
+                    </li>
+                    <li>
+                    <p>Được đánh giá uy tín thực chứng bởi các Reviewer nổi tiếng (Dương Dê, Vật Vờ...)</p>
+                    </li>
+                </ul>
+                <p>Chân thành cảm ơn quý khách đã ghé thăm và chúng tôi luôn nỗ lực từng ngày để phát triển trải nghiệm mua hàng ngày một tốt hơn.&nbsp;</p>
+                <h2>Thế nào&nbsp;Điện Thoại Giá Rẻ?</h2>
+                <p>Mua 1 sản phẩm công nghệ, là mua tính năng, sự hữu dụng đồng hành cùng bạn suốt 2 năm, thậm chí 10 năm. Vậy hiểu thế nào cho đúng về điện thoại giá rẻ?&nbsp;<br>
+                <br>
+                Theo anh Tiêu Kim CEO Di Động Thông Minh<br>
+                "Giá rẻ là khi số tiền bạn bỏ ra thấp hơn giá trị toàn phần bạn nhận được khi mua 1 sản phẩm". Có 7 yếu tố cấu thành nên giá trị sản phẩm</p>
+                <ul>
+                    <li>Chất lượng nội tại sản phẩm (thông số kĩ thuật, thiết kế, thương hiệu, độ hoàn thiện)</li>
+                    <li>Giá trị bạn nhận được trước khi mua, trong khi mua, và sau khi mua&nbsp;</li>
+                    <li>Cách mà bạn sở hữu hay sử dụng&nbsp;sản phẩm tiện lợi và dễ dàng&nbsp;</li>
+                    <li>Hãng và nhà bán lẻ có nhiều chương trình khuyến mãi, chăm sóc khách hàng tốt&nbsp;</li>
+                    <li>Quy trình bán hàng, bảo hành đem lại trải nghiệm tốt&nbsp;</li>
+                    <li>Sản phẩm có thương hiệu được chứng thực bởi những đối tượng đánh giá khách quan</li>
+                    <li>Người bán hàng cho bạn thực sự đứng về phía lợi ích của bạn.&nbsp;</li>
+                </ul>
+                <blockquote>
+                    <p>Chính sự kết hợp của 7 yếu tố này, như 7 nốt nhạc thiên biến vạn hoá! Khiến khái niệm "điện thoại giá rẻ" như mê cung. Nhưng có 1 cách phân biệt giá rẻ đơn giản bằng <span style="color:#2ecc71"><strong>Sự hài Lòng - Đúng thứ cần - Đúng thời điểm.&nbsp;</strong></span><br>
+                    Đây chính là bộ giá trị mà Di Động Thông Minh theo đuổi suốt 12 năm qua.&nbsp;<br>
+                    &nbsp;</p>
+                </blockquote>
+                <h2><br>
+                Thế nào là điện thoại đáng mua&nbsp;
+                </h2>
+                <p>Điện thoại đáng mua phải được chọn lựa trong phạm vi về một phân khúc giá nhất định, trong 1 thời đoạn nhất định và phù hợp với 1 đối tượng người mua&nbsp;xác định . Ví dụ:&nbsp;</p>
+                <ul>
+                    <li>Điện thoại đáng mua từ 2 tới 3 triệu dành cho sinh viên</li>
+                    <li>Top sản phẩm đáng mua dưới 5 triệu dành cho dân văn phòng.&nbsp;</li>
+                </ul>
+                <p>Người bán phải đưa được ra danh sách các sản phẩm sẵn có trên thị trường, lập bảng so sánh các tiêu chí của sản phẩm, xem tiêu chí nào thực sự phù hợp với các đặc điểm người dùng.&nbsp;</p>
+                <blockquote>
+                    <p>Từ đó bạn sẽ tìm ra điện thoại đáng mua - chính là sản phẩm phù hợp nhất với bạn.&nbsp;<br>
+                    Xem ngay kênh 
+                    <a href="https://www.youtube.com/c/dreview" rel="nofollow" target="_blank"><u><span style="color:#f39c12">dReviews - Đánh Giá Sâu Công Nghệ</span></u> </a>luôn có sẵn những video tư vấn khách quan!&nbsp;</p>
+                </blockquote>
+                <h2><br>
+                    Cách mua điện thoại không mất tiền?
+                </h2>
+                <p>Có 1 cách rất đơn giản để mua điện thoại không bỏ tiền, đó chính là gia nhập đội ngũ khởi nghiệp của Di Động Thông Minh. Công ty chúng tôi xác định rõ ràng 1 sứ mệnh đó không phải là làm sao tự mình bán được nhiều điện thoại mà phải là làm sao có thật nhiều người bán điện thoại uy tín.&nbsp;</p>
+                <ul>
+                    <li>Ứng tuyển các vị trí được đào tạo chuyên nghiệp từ chuyên viên tư vấn, kĩ thuật viên, kế toán bán hàng công nghệ, tới nhân viên bán hàng đa kênh tại Di Động Thông Minh</li>
+                    <li>Tham gia chế độ đào tạo thực chiến tại tất cả các vị trí trong vòng 3 năm - ngắn hơn 1 trường cao đẳng - nhưng cam kết chất lượng đầu ra được thực chứng.&nbsp;</li>
+                </ul>
+                <p>Gia nhập cùng chúng tôi ngay - <a href="https://didongthongminh.vn/tuyen-dung">Xem trang tuyển dụng Di Động Thông Minh&nbsp;</a></p>
+                <h2>Những nhà đầu tư Di Động Thông Minh là ai?</h2>
+                 <p>Bắt nguồn từ năm 2006 - một sinh viên lập trình ứng dụng trên điện thoại đam mê các sản phẩm Nokia, Blackberry, iPhone. Sự đam mê từng nhịn ăn chỉ để mua điện thoại, cậu ấy thấu hiểu những người ít tiền mà lại muốn mua điện thoại tốt. Trải qua các trào lưu gây dựng nền móng cho sự phổ cập điện thoại thông minh tại Việt Nam</p>
+                <ul>
+                    <li>Thời kì điện thoại Nokia chạy Symbian, Java (2G, EDGE)&nbsp;</li>
+                    <li>Thời kì của những chiếc O2 chạy Windown Phone cầm bút sang chảnh (cụ tổ của Galaxy Note)</li>
+                    <li>Thời kì huy hoàng của Blackberry tới khi iPhone xuất hiện (3G)</li>
+                    <li>Thời kì android xuất hiện và lưỡng cực phân tranh&nbsp;</li>
+                    <li>Bắt đầu của kỉ nguyên SKY-LG Hàn Quốc, Xiaomi Trung Quốc, Samsung Nhật Bản, Sony Z3 Docomo nhật</li>
+                    <li>Thời kì iPhone cũ, iPhone xách tay lên ngôi&nbsp;</li>
+                    <li>Thời kì điện thoại, iPhone chính hãng phổ cập thị trường&nbsp;</li>
+                </ul>
+                <p>Truyền thụ cảm hứng ấy, đến bây giờ những người chủ của Di Động Thông Minh vẫn là những con người đam mê, trẻ trung, là những sinh viên chưa ra trường muốn tiếp thu kinh nghiệm.&nbsp;<br>
+                <br>
+                Hãy cùng xem 1 video đầy chất xưa - kịch bản bởi Tiêu Kim. Đừng khóc vì ngày xưa quá nghèo, hay nhớ người yêu cũ thời hoa phượng đỏ bạn nha...</p>
+
+                <div class="ckeditor-html5-video" style="text-align:center">
+                    <div class="vsc-controller" controlslist="nodownload">&nbsp;</div>
+
+                    <div class="vsc-controller">&nbsp;</div>
+
+                    <div class="vsc-controller">&nbsp;</div>
+
+                    <div class="vsc-controller">&nbsp;</div>
+
+                    <div class="vsc-controller">&nbsp;</div>
+
+                    <div class="vsc-controller">&nbsp;</div>
+
+                    <div class="vsc-controller">&nbsp;</div>
+
+                    <div class="vsc-controller">&nbsp;</div>
+
+                    <div class="vsc-controller">&nbsp;</div>
+
+                    <video controls="controls" height="auto" src="/upload_images/files/BlackBerry_bold_giamgia.mp4#t=5" width="100%">&nbsp;</video>
+                </div>
+                <p>&nbsp;</p>
+                <p>Câu chuyện còn tiếp diễn, được viết thêm mỗi ngày...hãy ghé thăm trang thường xuyên để tìm thấy sự hạnh phúc trong thế giới chuyển đổi số.&nbsp;<br>
+                &nbsp;
+                </p>    
+            </div>
+        </div>
+    </div>
