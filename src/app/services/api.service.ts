@@ -17,9 +17,9 @@ export class ApiService {
   }
 
   // Ví dụ POST dữ liệu tới backend
-  postData(endpoint: string, payload: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/${endpoint}`, payload);
-  }
+  postData(endpoint: string, payload: any, options?: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/${endpoint}`, payload, options);
+  }  
   
   // Delete dữ liệu
   deleteData(endpoint: string, id: string): Observable<any> {

@@ -1,3 +1,4 @@
+import { HttpHeaders } from '@angular/common/http';
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import { NgModel } from "@angular/forms";
 import { ApiService } from "src/app/services/api.service";
@@ -191,6 +192,12 @@ export class CartComponent {
             return;
         }
 
+        //jwt token
+
+        const token = localStorage.getItem('accessToken');
+        const headers = new HttpHeaders({
+        'Authorization': `Bearer ${token}`
+        });
 
         const requestOrder = {
             phoneNumber: this.phone,
@@ -198,25 +205,17 @@ export class CartComponent {
             provinceId: this.selectedProvinceCode,
             gender: +this.gender, 
             product: selectedItems.map(item => ({
-              productId: item.id,
+              productId: item.idProduct,
               number: item.quantity
             }))
-          };
-        console.log(requestOrder);
-        
+        };
 
-        this.apiService.postData('order-user/create', requestOrder).subscribe({
+        this.apiService.postData('order-user/create', requestOrder, {headers}).subscribe({
             next: (response) => {
               console.log('Đặt hàng thành công:', response);
               alert('Đặt hàng thành công!');
-            },
-            error: (error) => {
-              console.error('Đặt hàng thất bại:', error);
-              alert('Đặt hàng thất bại. Vui lòng thử lại!');
             }
-          });
-
-        
+        }); 
     }
 
     /**
